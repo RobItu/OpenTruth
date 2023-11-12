@@ -558,27 +558,44 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+main {
+  background: linear-gradient(to bottom, white, #007bff);
+  height: 1000px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 64px;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  transition: background-color 0.3s;
+}
+.nav-links a:hover {
+  background-color: #555;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.mainPage {
+  padding: 0px 10px;
+  margin: 0px 64px;
+  background-color: white;
+}
+
+.mainPage h1 {
+  font-size: 50px;
+  font-weight: bold;
 }
 

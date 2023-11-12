@@ -117,3 +117,25 @@ updatedAllowlist.csv
 
 # Chainlink Functions request artifacts
 .chainlink_functions
+/backend/artifacts
+/backend/cache
+/backend/deployments
+/backend/node_modules
+/backend/coverage
+/backend/coverage.json
+/backend/typechain
+/backend/gas-report.txt
+/backend/contracts/test/fuzzing/crytic-export
+/backend/functions-request.json
+/backend/offchain-secrets.json
+/backend/allowlist.csv
+/backend/invalidUsers.csv
+/backend/updatedAllowlist.csv
+/backend/.openzeppelin
+/backend/.chainlink_functions
+
+# Frontend specific
+/frontend/.next
+/frontend/node_modules
+/frontend/out/
+/frontend/.DS_Store
