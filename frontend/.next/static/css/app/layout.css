@@ -560,8 +560,10 @@ video {
 
 main {
   background: linear-gradient(to bottom, white, #007bff);
-  height: 1000px;
+  height: 100%;
 }
+
+/*---------------------------------------------Nav Bar-------------------------------------------------------------*/
 
 .navbar {
   display: flex;
@@ -588,14 +590,93 @@ main {
   background-color: #555;
 }
 
-.mainPage {
+/*---------------------------------------------Main Page Body---------------------------------------------------------*/
+
+/*======Upper Body=======*/
+
+.upper-body {
   padding: 0px 10px;
   margin: 0px 64px;
-  background-color: white;
+  background-color: rgb(255, 255, 255, 0.5);
+  display: flex;
+  gap: 200px;
+  height: 100vh;
 }
 
-.mainPage h1 {
+.upper-body h1 {
   font-size: 50px;
   font-weight: bold;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.left-container p {
+  font-size: large;
+  font-weight: 400;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1em;
+  margin-right: 1.2em;
+  min-width: 120px;
+}
+
+.btn:hover {
+  background-color: #0051bb;
+}
+
+.btn-container {
+  display: flex;
+}
+
+/*===Lower Body===*/
+
+.lower-body {
+  padding: 0px 10px;
+  margin: 0px 64px;
+  background-color: rgb(255, 255, 255, 0.5);
+  display: flex;
+  gap: 200px;
+  height: 75vh;
+}
+
+.lower-body h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+.lower-body .left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns items to the start of the container */
+  justify-content: flex-start; /* Aligns content to the top */
+  width: 50%;
+}
+.lower-body .left-container p {
+  padding-left: 40px;
+  text-align: justify;
 }
 
