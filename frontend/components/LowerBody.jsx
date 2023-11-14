@@ -7,12 +7,26 @@ const LowerBody = () => {
       <div className="left-container">
         <h1>What is OpenTruth?</h1>
         <p>
-          OpenTruth is a platform that aims to help everyone read and interact
-          with complex digital paperwork. Many times we have all encountered
-          digital paperwork that is too long to read and we have to trust that
-          what is written there is not malicious and has our best interest at
-          heart. However, from private digital contracts to government
-          legislations sometimes this is not the truth.
+          OpenTruth is designed to simplify your experience with extensive and
+          intricate digital documents, enabling seamless reading and interaction
+          for users of all levels.
+        </p>
+        <p>
+          <ul className="my-bullet-list">
+            <li>
+              Summarize and interact with large text documents using AI that's
+              been tailored to read <span className="underline">only</span> the
+              source material.
+            </li>
+            <li>
+              Ask questions and receive answers about digital documents such as
+              legislation, terms and conditions, and more.
+            </li>
+            <li>
+              Use Chainlink's Web3 Functions to bridge a document's end-point
+              on-chain, providing transparent and verifiable data.
+            </li>
+          </ul>
         </p>
         <p>
           OpenTruth aims to solve this problem by using AI to read through these

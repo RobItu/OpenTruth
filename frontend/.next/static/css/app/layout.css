@@ -557,6 +557,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.underline {
+  text-decoration-line: underline;
+}
 
 main {
   background: linear-gradient(to bottom, white, #007bff);
@@ -569,7 +572,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: white;
   color: white;
   padding: 10px 64px;
 }
@@ -582,7 +585,7 @@ main {
 }
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: black;
   padding: 8px 15px;
   transition: background-color 0.3s;
 }
@@ -614,6 +617,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 50%;
+  padding-bottom: 100px;
 }
 
 .left-container p {
@@ -628,6 +632,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 100px;
 }
 
 .btn {
@@ -678,5 +683,14 @@ main {
 .lower-body .left-container p {
   padding-left: 40px;
   text-align: justify;
+}
+
+.truth_blue {
+  color: #375bd2;
+}
+
+.my-bullet-list {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
