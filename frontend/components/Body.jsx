@@ -16,7 +16,7 @@ const Body = () => {
       </div>
 
       <div className="right-container">
-        <Image src={"/logo_blue.png"} alt="logo.png" width={500} height={600} />
+        <Image src={"/logo.png"} alt="logo.png" width={500} height={600} />
       </div>
     </div>
   );
