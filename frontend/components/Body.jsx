@@ -11,7 +11,9 @@ const Body = () => {
         <p>The platform that uses AI and Web3 to empower the generations</p>
         <div className="btn-container">
           <Button text="Learn More" />
-          <Button text="Service" />
+          <Link href="/service" className="btn">
+            Service
+          </Link>
         </div>
       </div>
 
