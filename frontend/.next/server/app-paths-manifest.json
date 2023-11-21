@@ -1,4 +1,5 @@
 {
+  "/service/[title]/page": "app/service/[title]/page.js",
   "/service/page": "app/service/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/api/bills/route": "app/api/bills/route.js",

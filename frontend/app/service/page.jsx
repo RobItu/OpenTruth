@@ -1,7 +1,6 @@
 "use client";
 import Bills from "@/components/Bills";
 import React, { useEffect, useState } from "react";
-require("dotenv").config();
 
 const servicePage = () => {
   const [bills, setBill] = useState([]);
