@@ -1,13 +1,29 @@
 "use client";
-import React, { useEffect } from "react";
+import Bills from "@/components/Bills";
+import React, { useEffect, useState } from "react";
 require("dotenv").config();
 
-const page = () => {
+const servicePage = () => {
+  const [bills, setBill] = useState([]);
   useEffect(() => {
-    async function fetchBills() {}
-    fetchBills();
+    const getBills = async () => {
+      const response = await fetch("/api/bills");
+      const bills = await response.json();
+      console.log(bills);
+      setBill(bills.bills);
+    };
+    getBills();
   }, []);
-  return <div className="upper-body">page</div>;
+
+  return (
+    <main>
+      <div className="servicePage">
+        <div className="bills-container">
+          <Bills data={bills} />
+        </div>
+      </div>
+    </main>
+  );
 };
 
-export default page;
+export default servicePage;

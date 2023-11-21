@@ -703,6 +703,58 @@ main {
   padding-left: 20px;
 }
 
+/*==============Bills==============*/
+
+.servicePage{
+  padding: 0px 10px;
+  margin: 0px 64px;
+  background-color: rgb(255, 255, 255, 0.5);
+  display: flex;
+  gap: 200px;
+  height: 100%;
+}
+
+.bills-container {
+  justify-content: center;
+  padding: 2rem;
+}
+
+.bill-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+  grid-gap: 20px;
+}
+
+.bill-list li {
+  background-color: white;
+  padding-bottom: 20px;
+  margin-top: 1rem;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bill-list li:hover {
+  transform: scale(1.05);
+}
+
+.bill-list h2 {
+  padding-top: 10px;
+  padding: 0px 10px;
+  font-weight: bold;
+}
+
+.bill-list p {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 @media (max-width: 600px) {
   /* Adjust the 600px breakpoint as needed */
   .navbar {
