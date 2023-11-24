@@ -10,7 +10,7 @@ const { abi } = require("../contracts/abi/FunctionsConsumer.json");
 
 const consumerAddress = "0xDe5C73ab2bD1379c92D3e80666f859e7Fdc8e404";
 const subscriptionId = "878";
-const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a6561140b";
+const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a65611d26";
 
 const sendRequest = async () => {
   if (!consumerAddress || !encryptedSecretsRef || !subscriptionId) {
@@ -22,8 +22,7 @@ const sendRequest = async () => {
     .readFileSync(path.resolve(__dirname, "../source.js"))
     .toString();
 
-  const prompt = "Describe what is Chainlink in 15 words or less";
-  const args = [prompt];
+  const args = [];
   const callbackGasLimit = 300_000;
 
   console.log("\n Sending the Request....");

@@ -1,26 +1,16 @@
-const gptPrompt = args[0];
-
-const postData = {
-  model: "gpt-3.5-turbo",
-  messages: [{ role: "user", content: gptPrompt }],
-  temperature: 0,
-};
-
 const openAIResponse = await Functions.makeHttpRequest({
-  url: "https://api.openai.com/v1/chat/completions",
-  method: "POST",
+  url: `https://api.congress.gov/v3/bill/118/hr/5283/text?format=json&api_key=${secrets.apiKey}`,
   headers: {
-    Authorization: `Bearer ${secrets.apiKey}`,
-    "Content-Type": "application/json",
+    accept: "application/json",
   },
-  data: postData,
 });
 
 if (openAIResponse.error) {
-  throw new Error(JSON.stringify(openAIResponse));
+  console.error(openAIResponse.error);
+  throw Error("Request failed");
 }
 
-const result = openAIResponse.data.choices[0].message.content;
+const { data } = openAIResponse;
 
-console.log(result);
-return Functions.encodeString(result);
+// Return Character Name
+return Functions.encodeString(data.textVersions[0].formats[0].url);
