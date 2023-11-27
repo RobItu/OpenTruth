@@ -11,6 +11,7 @@ const { provider } = require("./connection.js");
 
 const NETWORK = "polygonMumbai";
 const subscriptionId = "878";
+let readOutResponse = "";
 
 const responseListener = new ResponseListener({
   provider,
@@ -23,6 +24,10 @@ responseListener.listenForResponses(subscriptionId, (response) => {
     console.log(
       "\nFunctions response decodes to a string value of:  ",
       decodeResult(response.responseBytesHexstring, ReturnType.string)
+    );
+    readOutResponse = decodeResult(
+      response.responseBytesHexstring,
+      ReturnType.string
     );
   } else {
     console.log("\nError during functions execution:  ", response.errorString);

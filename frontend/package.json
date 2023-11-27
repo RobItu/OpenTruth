@@ -9,11 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chainlink/contracts": "^0.8.0",
     "@chainlink/env-enc": "^1.0.5",
+    "@chainlink/functions-toolkit": "^0.2.6",
+    "@types/node": "^20.6.2",
     "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
     "next": "13.5.6",
+    "nodemon": "^3.0.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

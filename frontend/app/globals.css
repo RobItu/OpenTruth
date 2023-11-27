@@ -146,7 +146,7 @@ main {
 
 /*==============Bills==============*/
 
-.servicePage{
+.servicePage {
   padding: 0px 10px;
   margin: 0px 64px;
   background-color: rgb(255, 255, 255, 0.5);
@@ -158,6 +158,13 @@ main {
 .bills-container {
   justify-content: center;
   padding: 2rem;
+}
+
+.bills-container h1 {
+  display: flex;
+  font-weight: bold;
+  font-size: 50px;
+  justify-content: center;
 }
 
 .bill-list {

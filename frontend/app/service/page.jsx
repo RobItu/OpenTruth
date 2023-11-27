@@ -18,6 +18,7 @@ const servicePage = () => {
     <main>
       <div className="servicePage">
         <div className="bills-container">
+          <h1>Bills</h1>
           <Bills data={bills} />
         </div>
       </div>
