@@ -1,0 +1,20 @@
+{
+  "name": "5mf",
+  "version": "1.0.0",
+  "description": "5mf node server api tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Clif Hodges",
+  "license": "ISC",
+  "dependencies": {
+    "@chainlink/env-enc": "^1.0.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
