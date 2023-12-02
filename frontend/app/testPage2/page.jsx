@@ -12,7 +12,6 @@ const ContractPage = () => {
     const getContractData = async () => {
       const response = await fetch("/api/fetchContractData");
       const data = await response.json();
-      console.log("DID IT WORK??");
       console.log(data);
       setResponse(data);
     };

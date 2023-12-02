@@ -14,9 +14,8 @@ const HOST = "localhost";
 const PORT = 8888;
 
 api.get("/", (req, res) => {
-  res.send("Welcome to this awesome API!");
+  res.send("Welcome to this  API!");
 });
-
 
 api.get("/run-chainlink-functions-script", (req, res) => {
   console.log("new version?");
@@ -34,7 +33,5 @@ api.get("/run-chainlink-functions-script", (req, res) => {
     }
   );
 });
-
-// api.post ? how to get value from listener?
 
 api.listen(PORT, () => console.log(`API running at ${HOST}:${PORT}!`));

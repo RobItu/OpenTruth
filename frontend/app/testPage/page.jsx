@@ -10,9 +10,7 @@ const page = () => {
   useEffect(() => {
     const verifyWithFunctions = async () => {
       console.log("CALLING.....");
-      const response = await fetch(
-        process.env.NEXT_PUBLIC_API_URL
-      );
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL); // I NEED TO PASS ARGUEMENTS HERE
       const data = await response.text();
       console.log("CALLED");
       console.log(data);

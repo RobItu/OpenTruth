@@ -10,6 +10,7 @@ const Bills = ({ data: bills }) => {
             <Link href={`/service/${bill.title}`}>
               <h2>{bill.title}</h2>
               <p>Latest Action: {bill.latestAction.text}</p>
+              <p className="align-date">{bill.latestAction.actionDate}</p>
             </Link>
           </li>
         ))}

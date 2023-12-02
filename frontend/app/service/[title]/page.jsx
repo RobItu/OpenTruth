@@ -3,34 +3,23 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 const customPage = ({ params, res }) => {
-  const [bills, setBill] = useState([]);
-  const [response, setResponse] = useState("");
-  const [clicked, handleClick] = useState("");
-  const [runFunctions, handleRunFunctions] = useState("")
-
-  const verifyWithFunctions = async () => {
-    console.log("CALLING.....");
-
-    const response = await fetch(process.env.API_URL);
-    const data = await response.text();
-    console.log("CALLED");
-    console.log(data);
-  };
+  const [bill, setBill] = useState({ latestAction: {} });
+  const [contractData, setContractData] = useState("");
 
   useEffect(() => {
     //use effect 1
     const getBills = async () => {
       const response = await fetch("/api/bills");
       const data = await response.json();
-      console.log(data);
 
       const encodedString = params.title;
       const decodedString = decodeURIComponent(encodedString);
-      console.log(decodedString);
 
       const selectedBill = data.bills.filter(
         (bill) => bill.title === decodedString
       );
+
+      console.log(`Selected Bill:`, selectedBill[0]);
 
       setBill(selectedBill[0]);
     };
@@ -43,24 +32,24 @@ const customPage = ({ params, res }) => {
       const response = await fetch("/api/fetchContractData");
       const data = await response.json();
       console.log("DID IT WORK??");
-      console.log(data);
-      setResponse(data);
+      console.log("contract response: " + data);
+      setContractData(data);
     };
     getContractData();
-  }, [clicked]);
-
-  useEffect(()=>{
-    verifyWithFunctions()
-  }, [runFunctions])
+  }, []);
 
   return (
     <main>
       <div className="servicePage">
-        <h1>Title: {bills.title}</h1>
-        <h1>Response: {response}</h1>
-        <button className="btn" onClick={handleClick}>
-          Click me
-        </button>
+        <div className="bill-data">
+          <h1>Title: {bill.title}</h1>
+          <h1>Response: {contractData}</h1>
+          <h1>
+            Latest Action: On{" "}
+            <span className="bold"> {bill.latestAction.actionDate}:</span>{" "}
+            <span className="underline">{bill.latestAction.text}</span>
+          </h1>
+        </div>
       </div>
     </main>
   );

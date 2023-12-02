@@ -1,14 +1,14 @@
 {
-  "name": "5mf",
+  "name": "API-ENDPOINT",
   "version": "1.0.0",
-  "description": "5mf node server api tutorial",
+  "description": "Api-endpoint for Hackathon 2023 Fall.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
-  "author": "Clif Hodges",
-  "license": "ISC",
+  "author": "Roberto Iturralde",
+  "license": "MIT",
   "dependencies": {
     "@chainlink/env-enc": "^1.0.5",
     "cors": "^2.8.5",
