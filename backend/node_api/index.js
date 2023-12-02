@@ -17,18 +17,20 @@ api.get("/", (req, res) => {
   res.send("Welcome to this  API!");
 });
 
+
 api.get("/run-chainlink-functions-script", (req, res) => {
-  console.log("new version?");
+  console.log("CALLING CHAINLINK FUNCTIONS...");
+  const { congressNumber, billType, billNumber } = req.query;
   exec(
-    "node /home/robitu/hackathon/hackathon-fall-2023/opentruth2/backend/scripts/07_congress_request.js",
+    `node /home/robitu/hackathon/hackathon-fall-2023/opentruth2/backend/scripts/07_congress_request.js ${congressNumber} ${billType} ${billNumber}`,
     (error, stdout, stderr) => {
-      console.log(`stdout: ${stdout}`);
       if (error) {
         console.error(`exec error: ${error}`);
         return res.status(500).send("Failed to run test script");
       }
       console.log(`stdout: ${stdout}`);
       console.error(`stderr: ${stderr}`);
+      console.loh("~~~ CHAINLINK FUNCTIONS REQUEST SENT ~~~");
       res.send(stdout); // Send stdout as a plain text response
     }
   );

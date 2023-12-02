@@ -1,5 +1,6 @@
 const openAIResponse = await Functions.makeHttpRequest({
-  url: `https://api.congress.gov/v3/bill/118/hr/5283/text?format=json&api_key=${secrets.apiKey}`,
+  url: `https://api.congress.gov/v3/bill/{{congressNumber}}/{{billType}}/{{billNumber}}/text?format=json&api_key=${secrets.apiKey}`,
+
   headers: {
     accept: "application/json",
   },

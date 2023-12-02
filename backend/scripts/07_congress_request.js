@@ -10,7 +10,7 @@ const { abi } = require("../contracts/abi/FunctionsConsumer.json");
 
 const consumerAddress = "0xDe5C73ab2bD1379c92D3e80666f859e7Fdc8e404";
 const subscriptionId = "878";
-const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a656556a1";
+const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a656a933b";
 
 const sendRequest = async () => {
   if (!consumerAddress || !encryptedSecretsRef || !subscriptionId) {
@@ -18,16 +18,32 @@ const sendRequest = async () => {
   }
   const functionsConsumer = new Contract(consumerAddress, abi, signer);
 
-  const source = fs
+  // Function to replace placeholders with actual arguments
+  function replacePlaceholders(template, args) {
+    return template.replace(/{{(\w+)}}/g, (_, key) => args[key] || "");
+  }
+
+  const [, , congressNum, billT, billNum] = process.argv;
+
+  const arguments = {
+    congressNumber: congressNum,
+    billType: billT,
+    billNumber: billNum,
+  };
+
+  const sourceTemplate = fs
     .readFileSync(path.resolve(__dirname, "../source.js"))
     .toString();
+
+  // Replace placeholders in the source file
+  const modifiedSource = replacePlaceholders(sourceTemplate, arguments);
 
   const args = [];
   const callbackGasLimit = 300_000;
 
   console.log("\n Sending the Request....");
   const requestTx = await functionsConsumer.sendRequest(
-    source,
+    modifiedSource,
     Location.DONHosted,
     encryptedSecretsRef,
     args,

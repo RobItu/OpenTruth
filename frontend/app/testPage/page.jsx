@@ -6,16 +6,25 @@ import React, { useEffect, useState } from "react";
 
 const page = () => {
   const [response, setResponse] = useState("");
-  const [randomNumber, setRandomNumber] = useState("");
+
   useEffect(() => {
+    const queryParams = new URLSearchParams({
+      congressNumber: "117",
+      billType: "hr",
+      billNumber: "3599",
+    }).toString();
+
     const verifyWithFunctions = async () => {
       console.log("CALLING.....");
-      const response = await fetch(process.env.NEXT_PUBLIC_API_URL); // I NEED TO PASS ARGUEMENTS HERE
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_FUNCTIONS_API_URL}/?${queryParams}`
+      );
       const data = await response.text();
       console.log("CALLED");
       console.log(data);
       setResponse(stringify(data));
     };
+
     verifyWithFunctions();
   }, []);
 
