@@ -1,7 +1,4 @@
 "use client";
-import Web3 from "web3";
-import contractABI from "../../../backend/contracts/abi/FunctionsConsumer.json";
-import LastResponse from "@/components/LastResponse";
 import { useEffect, useState } from "react";
 
 //TESTING PAGE FOR FETCHING CONTRACT DATA FROM POLYGONSCAN
@@ -19,7 +16,7 @@ const ContractPage = () => {
   }, []);
   return (
     <div>
-      <h1>Contract data: {response}</h1>
+      <h1>{response}</h1>
     </div>
   );
 };
