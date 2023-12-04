@@ -1,6 +1,4 @@
 {
-  "/testPage2/page": "app/testPage2/page.js",
-  "/service/page": "app/service/page.js",
   "/service/[title]/page": "app/service/[title]/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/api/bills/route": "app/api/bills/route.js"

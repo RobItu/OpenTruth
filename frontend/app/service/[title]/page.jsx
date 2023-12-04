@@ -2,6 +2,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import ShortenedTxHash from "@/components/ShortenedTxHash";
+import HeaderDataTable from "@/components/HeaderDataTable";
+import Prompt from "@/components/Prompt";
 
 const customPage = ({ params, res }) => {
   const [bill, setBill] = useState({ latestAction: {} });
@@ -118,18 +120,31 @@ const customPage = ({ params, res }) => {
   return (
     <main>
       <div className="servicePage">
-        <div className="bill-data">
+        <div className="bill-data-container">
           <h1>Title: {bill.title}</h1>
-          <h1>Functions Response: {txHash}</h1>
-          <h1>
-            <ShortenedTxHash hash={txHash} />
-          </h1>
-          <h1>
+          <div className="verified-top-data">
+            {""}
+
+            <HeaderDataTable
+              hash={txHash}
+              date={bill.updateDate}
+              vurl={urlResponse}
+            />
+          </div>
+          <div className="prompt">
+            <Prompt verified_url={urlResponse} />
+          </div>
+          <div className="link-container"></div>
+          <h1>MORE INFORMATION</h1>
+          <div className="more-information-table"></div>
+          <h2>Functions Response: {txHash}</h2>
+
+          <h2>
             Latest Action: On{" "}
             <span className="bold"> {bill.latestAction.actionDate}:</span>{" "}
             <span className="underline">{bill.latestAction.text}</span>
-          </h1>
-          <h1>Verified URL: {urlResponse}</h1>
+          </h2>
+          <h2>Verified URL: {urlResponse}</h2>
         </div>
       </div>
     </main>

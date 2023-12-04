@@ -557,6 +557,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.table {
+  display: table;
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -768,6 +771,99 @@ main {
 .align-date {
   text-decoration: underline;
 }
+
+/*==================== SELECTED BILL =====================*/
+.bill-data-container {
+  width: 100%;
+}
+
+.bill-data-container h1 {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-weight: bold;
+}
+/*==================== ============= =====================*/
+
+/*=================== DATA TABLES ======================*/
+.data-table-container {
+  display: flex;
+  justify-content: center; /* Centers the table horizontally */
+}
+
+.data-table {
+  width: 70%;
+  border-collapse: collapse; /* For removing the space between borders */
+  text-align: center;
+  margin-top: 20px;
+  justify-items: center;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd; /* Adds border to table cells */
+  padding: 8px;
+}
+
+.data-table th {
+  background-color: #f2f2f2; /* Light grey background for header */
+  color: #333; /* Dark text color for header */
+}
+
+.data-table td {
+  background-color: white; /* Light grey background for header */
+  color: #333; /* Dark text color for header */
+}
+
+.data-table-link {
+  color: rgb(0, 110, 255);
+}
+
+/*=================== ========= ======================*/
+/*=================== PROMPT CONTAINER ======================*/
+
+.prompt {
+  display: flex;
+  justify-content: center;
+}
+
+.prompt-container {
+  background-color: #57bcff;
+  padding-bottom: 20px;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 70%;
+  display: flex;
+}
+
+.prompt-container p {
+  color: #f5f3f3;
+  font-weight: bold;
+  text-align: justify;
+  padding-right: 20px;
+}
+
+.pbtn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 120px;
+}
+
+.pbtn-copied {
+  background-color: #16c60c;
+}
+
+/*=================== ========= ======================*/
 
 @media (max-width: 600px) {
   /* Adjust the 600px breakpoint as needed */
