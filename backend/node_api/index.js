@@ -61,6 +61,7 @@ api.get("/update-data", (req, res) => {
 api.get("/run-chainlink-functions-script", (req, res) => {
   console.log("CALLING CHAINLINK FUNCTIONS...");
   const { congressNumber, billType, billNumber } = req.query;
+  console.log(`NUMBER: ${congressNumber} TYPE: ${billType} BNUMBER: ${billNumber}`)
   exec(
     `node /home/robitu/hackathon/hackathon-fall-2023/opentruth2/backend/scripts/07_congress_request.js ${congressNumber} ${billType} ${billNumber}`,
     (error, stdout, stderr) => {
