@@ -1,5 +1,7 @@
 {
+  "/service/page": "app/service/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/bills/route": "app/api/bills/route.js",
   "/service/[title]/page": "app/service/[title]/page.js",
-  "/page": "app/page.js",
-  "/service/page": "app/service/page.js"
+  "/api/fetchContractData/route": "app/api/fetchContractData/route.js"
 }

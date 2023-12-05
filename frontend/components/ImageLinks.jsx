@@ -22,7 +22,7 @@ const ImageLinks = ({ verified_url }) => {
         <Link href={verified_url} target="_blank" className="image-card">
           <div>
             <Image
-              src={"/cyber2.jpg"}
+              src={"/ai_liberty2.jpg"}
               alt={`ailink.png`}
               width={351}
               height={370}

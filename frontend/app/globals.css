@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 main {
-  background: linear-gradient(to bottom, white, #007bff);
+  background: white;
   height: 100%;
 }
 
@@ -15,12 +15,13 @@ main {
   align-items: center;
   background-color: white;
   color: white;
-  /*border-bottom: 2px solid #b4b3b3*/
+  border-bottom: 2px solid #b4b3b3;
   margin: 0px 64px;
 }
 .logo {
   font-size: 24px;
   font-weight: bold;
+  padding-bottom: 10px;
 }
 .nav-links {
   display: flex;
@@ -29,17 +30,19 @@ main {
   width: 50%;
   gap: 100px;
   font-size: larger;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 10px;
 }
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
   padding: 8px 15px;
   transition: background-color 0.3s;
 }
 .nav-links a:hover {
-  background-color: #555;
+  color: #2f5cd9;
+  border-radius: 10px;
+  box-shadow: 0px 1px 0px #2f5cd9; /* Custom underline using box-shadow */
 }
 
 /*---------------------------------------------Main Page Body---------------------------------------------------------*/
@@ -155,16 +158,46 @@ main {
   height: 100%;
 }
 
+.service-title-header {
+  width: 100%;
+  background-color: #375bd2;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-radius: 6px;
+}
+
+.service-title-header p {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.service-title-header h1 {
+  display: flex;
+  font-weight: bold;
+  font-size: 50px;
+  justify-content: center;
+  color: whitesmoke;
+}
+
 .bills-container {
   justify-content: center;
   padding: 2rem;
 }
 
-.bills-container h1 {
+.bill-cards-container {
+  background-color: rgb(128, 128, 128, 0.3);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.card-image {
+  padding-bottom: 5px;
+}
+
+.bill-title {
   display: flex;
-  font-weight: bold;
-  font-size: 50px;
-  justify-content: center;
+  justify-content: end;
 }
 
 .bill-list {

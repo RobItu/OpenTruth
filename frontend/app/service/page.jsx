@@ -18,8 +18,17 @@ const servicePage = () => {
     <main>
       <div className="servicePage">
         <div className="bills-container">
-          <h1>Bills</h1>
-          <Bills data={bills} />
+          <div className="service-title-header">
+            <h1>Bills</h1>
+            <p>
+              Congressional data is provided by the official API provided by the
+              United States Congress.
+            </p>
+            <p> Bills listed are sorted by date of latest action.</p>
+          </div>
+          <div className="bill-cards-container">
+            <Bills data={bills} />
+          </div>
         </div>
       </div>
     </main>
