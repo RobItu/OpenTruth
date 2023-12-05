@@ -12,7 +12,7 @@ const ImageLinks = ({ verified_url }) => {
               src={"/billflag.jpg"}
               alt={`billflag.jpg`}
               width={351}
-              height={370}
+              height={500}
             />
           </div>
           <p>Go to Source Document</p>
@@ -25,7 +25,7 @@ const ImageLinks = ({ verified_url }) => {
               src={"/ai_liberty2.jpg"}
               alt={`ailink.png`}
               width={351}
-              height={370}
+              height={500}
             />
           </div>
           <p>Read it with AI</p>
@@ -38,7 +38,7 @@ const ImageLinks = ({ verified_url }) => {
               src={"/tablet (1).jpg"}
               alt={`moreinformationlink.jpg`}
               width={351}
-              height={370}
+              height={500}
             />
           </div>
           <p>More Bill Information</p>

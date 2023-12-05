@@ -1,4 +1,5 @@
 "use client";
+import BodyDataTable from "@/components/BodyDataTable";
 import HeaderDataTable from "@/components/HeaderDataTable";
 import Prompt from "@/components/Prompt";
 import { useEffect, useState } from "react";
@@ -10,7 +11,7 @@ const ContractPage = () => {
     <div>
       <h1>1. what</h1>
       <h1>
-        <HeaderDataTable />
+        <BodyDataTable />
       </h1>
     </div>
   );

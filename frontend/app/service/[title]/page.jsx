@@ -5,6 +5,8 @@ import ShortenedTxHash from "@/components/ShortenedTxHash";
 import HeaderDataTable from "@/components/HeaderDataTable";
 import Prompt from "@/components/Prompt";
 import ImageLinks from "@/components/ImageLinks";
+import BodyDataTable from "@/components/BodyDataTable";
+import VerificationTable from "@/components/VerificationTable";
 
 const customPage = ({ params, res }) => {
   const [bill, setBill] = useState({ latestAction: {} });
@@ -121,8 +123,9 @@ const customPage = ({ params, res }) => {
   return (
     <main>
       <div className="servicePage">
-        <div className="bill-data-container">
-          <h1>Title: {bill.title}</h1>
+        <div>
+          <h1 className="bill-title-header">Bill: {bill.title}</h1>
+
           <div className="verified-top-data">
             {""}
 
@@ -138,16 +141,12 @@ const customPage = ({ params, res }) => {
           <div className="link-container">
             <ImageLinks verified_url={urlResponse} />
           </div>
-          <h1>MORE INFORMATION</h1>
-          <div className="more-information-table"></div>
-          <h2>Functions Response: {txHash}</h2>
 
-          <h2>
-            Latest Action: On{" "}
-            <span className="bold"> {bill.latestAction.actionDate}:</span>{" "}
-            <span className="underline">{bill.latestAction.text}</span>
-          </h2>
-          <h2>Verified URL: {urlResponse}</h2>
+          <h1>MORE INFORMATION</h1>
+          <div className="more-information-tables">
+            <BodyDataTable data={bill} />
+            <VerificationTable hash={txHash} vurl={urlResponse} />
+          </div>
         </div>
       </div>
     </main>

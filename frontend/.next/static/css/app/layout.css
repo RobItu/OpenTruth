@@ -852,6 +852,26 @@ main {
   color: rgb(0, 110, 255);
 }
 
+.title-cell {
+  font-weight: bold;
+}
+
+.body-table {
+  border: 1px solid #ddd; /* Adds border to table cells */
+}
+
+.body-table th,
+.body-table td {
+  border: 1px solid #ddd; /* Adds border to table cells */
+  padding: 8px;
+}
+
+.more-information-tables {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
 /*=================== ========= ======================*/
 /*=================== PROMPT CONTAINER ======================*/
 
