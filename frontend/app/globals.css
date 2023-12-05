@@ -300,6 +300,38 @@ main {
 
 /*=================== ========= ======================*/
 
+/*=================== IMAGE-LINKS-SELECTED-BILL ======================*/
+
+.image-links-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.spacer {
+  margin-right: 30px; /* Adds space to the right of each image container */
+  display: flex; /* This will allow the margin to take effect */
+  vertical-align: top;
+}
+
+.spacer p {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.image-card div {
+  border-radius: 8px; /* Rounded edges */
+  overflow: hidden; /* This ensures the rounded corners are applied to the image */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.image-card:hover div {
+  transform: scale(1.02); /* Slightly enlarge the image on hover */
+}
+
+/*=================== ========= ======================*/
+
 @media (max-width: 600px) {
   /* Adjust the 600px breakpoint as needed */
   .navbar {

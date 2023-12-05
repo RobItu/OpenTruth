@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ShortenedTxHash from "@/components/ShortenedTxHash";
 import HeaderDataTable from "@/components/HeaderDataTable";
 import Prompt from "@/components/Prompt";
+import ImageLinks from "@/components/ImageLinks";
 
 const customPage = ({ params, res }) => {
   const [bill, setBill] = useState({ latestAction: {} });
@@ -134,7 +135,9 @@ const customPage = ({ params, res }) => {
           <div className="prompt">
             <Prompt verified_url={urlResponse} />
           </div>
-          <div className="link-container"></div>
+          <div className="link-container">
+            <ImageLinks verified_url={urlResponse} />
+          </div>
           <h1>MORE INFORMATION</h1>
           <div className="more-information-table"></div>
           <h2>Functions Response: {txHash}</h2>
