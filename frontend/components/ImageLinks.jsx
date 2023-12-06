@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AiOptions from "./AiOptions";
 
 const ImageLinks = ({ verified_url }) => {
   return (
@@ -19,17 +20,7 @@ const ImageLinks = ({ verified_url }) => {
         </Link>
       </div>
       <div className="spacer">
-        <Link href={verified_url} target="_blank" className="image-card">
-          <div>
-            <Image
-              src={"/ai_liberty2.jpg"}
-              alt={`ailink.png`}
-              width={351}
-              height={500}
-            />
-          </div>
-          <p>Read it with AI</p>
-        </Link>
+        <AiOptions />
       </div>
       <div className="spacer">
         <Link href={"/service"} target="_blank" className="image-card">

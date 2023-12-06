@@ -127,10 +127,10 @@ const customPage = ({ params, res }) => {
         <div>
           <h1 className="bill-title-header">Bill: {bill.title}</h1>
           <h2 className="bill-title-subtitle">
-            Data obtained has been cryptographically verified by{" "}
+            Data obtained has been cryptographically verified by
             <span>
               <Link
-                href={"https://chain.link/functions"}
+                href={"https://functions.chain.link/mumbai/878"}
                 className="chainlink-functions-link"
                 target="_blank"
               >
@@ -170,10 +170,6 @@ const customPage = ({ params, res }) => {
           </div>
 
           <h1 className="more-information">MORE INFORMATION</h1>
-          <div className="bill-info-ver-header">
-            <h2>Bill Information</h2>
-            <h2 className="more-bill-info-header">Verification Data</h2>
-          </div>
           <div className="more-information-tables">
             <BodyDataTable data={bill} />
             <VerificationTable hash={txHash} vurl={urlResponse} />

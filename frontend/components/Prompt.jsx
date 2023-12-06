@@ -20,7 +20,7 @@ const Prompt = ({ verified_url }) => {
   };
   return (
     <div className="prompt-container">
-      <h2>Prompt:</h2>
+      <h2 className="prompt-tag">Prompt:</h2>
       <p ref={textToCopy}>
         Read this document: {verified_url}. Now provide me an accurate summary
         of it and answer any further questions I might have based solely on the

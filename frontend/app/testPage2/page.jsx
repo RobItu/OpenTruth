@@ -1,4 +1,5 @@
 "use client";
+import AiOptions from "@/components/AiOptions";
 import BodyDataTable from "@/components/BodyDataTable";
 import HeaderDataTable from "@/components/HeaderDataTable";
 import Prompt from "@/components/Prompt";
@@ -11,7 +12,7 @@ const ContractPage = () => {
     <div>
       <h1>1. what</h1>
       <h1>
-        <BodyDataTable />
+        <AiOptions />
       </h1>
     </div>
   );

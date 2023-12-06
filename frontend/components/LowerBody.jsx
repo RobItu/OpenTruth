@@ -1,7 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import Carousel from "./Carousel";
 
 const LowerBody = () => {
+  const images = [
+    "/homeImages/cnn.PNG",
+    "/homeImages/Medium.PNG",
+    "/homeImages/msnbc.PNG",
+  ];
+
   return (
     <div className="lower-body">
       <div className="left-container">
@@ -41,7 +48,7 @@ const LowerBody = () => {
         <p> Curious as to how it works? Jump in and try out our service!</p>
       </div>
       <div className="right-container">
-        <Image src="/cnn.PNG" alt="cnn" width={600} height={800} />
+        <Carousel />
       </div>
     </div>
   );

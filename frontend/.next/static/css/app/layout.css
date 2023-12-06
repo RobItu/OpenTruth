@@ -824,6 +824,7 @@ main {
 }
 
 /*==================== SELECTED BILL =====================*/
+
 .bill-data-container {
   width: 100%;
 }
@@ -842,13 +843,20 @@ main {
   color: #333;
   padding: 20px;
 }
+
+.ai-options-container {
+  font-weight: bold;
+  color: gray;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 /*==================== ============= =====================*/
 
 .bill-info-ver-header {
   display: flex;
   width: 100%;
-  gap: 640px;
-  padding-left: 400px;
+  gap: 600px;
+  padding-left: 250px;
   padding-top: 20px;
   padding-bottom: 10px;
   font-size: larger;
@@ -874,10 +882,20 @@ main {
   justify-items: center;
 }
 
+.data-table h2 {
+  display: flex;
+  justify-content: center;
+}
+
 .data-table th,
 .data-table td {
   border: 1px solid #ddd; /* Adds border to table cells */
   padding: 8px;
+}
+
+.ai-link-list {
+  font-weight: bold;
+  box-shadow: #333;
 }
 
 .data-table th {
@@ -941,6 +959,7 @@ main {
   font-weight: bold;
   text-align: justify;
   padding-right: 20px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .pbtn {
@@ -962,6 +981,19 @@ main {
 }
 
 /*=================== ========= ======================*/
+
+.verification-information {
+  display: flex;
+  justify-content: center;
+}
+
+.prompt-tag {
+  padding-top: 30px;
+  padding-right: 20px;
+  font-weight: bolder;
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+}
 
 /*=================== IMAGE-LINKS-SELECTED-BILL ======================*/
 
@@ -994,6 +1026,15 @@ main {
 
 .image-card:hover div {
   transform: scale(1.02); /* Slightly enlarge the image on hover */
+}
+
+.links-box {
+  position: absolute;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  z-index: 10;
+  /* additional styling as needed */
 }
 
 /*=================== ========= ======================*/
