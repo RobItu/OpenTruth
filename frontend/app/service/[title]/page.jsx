@@ -7,6 +7,7 @@ import Prompt from "@/components/Prompt";
 import ImageLinks from "@/components/ImageLinks";
 import BodyDataTable from "@/components/BodyDataTable";
 import VerificationTable from "@/components/VerificationTable";
+import Link from "next/link";
 
 const customPage = ({ params, res }) => {
   const [bill, setBill] = useState({ latestAction: {} });
@@ -125,6 +126,32 @@ const customPage = ({ params, res }) => {
       <div className="servicePage">
         <div>
           <h1 className="bill-title-header">Bill: {bill.title}</h1>
+          <h2 className="bill-title-subtitle">
+            Data obtained has been cryptographically verified by{" "}
+            <span>
+              <Link
+                href={"https://chain.link/functions"}
+                className="chainlink-functions-link"
+                target="_blank"
+              >
+                Chainlink Functions.
+              </Link>{" "}
+            </span>
+          </h2>
+          <div className="bill-title-subtitle">
+            <h2>
+              Data sourced from the official United States Congress{" "}
+              <span>
+                <Link
+                  href={"https://chain.link/functions"}
+                  className="chainlink-functions-link"
+                  target="_blank"
+                >
+                  API End-point.
+                </Link>{" "}
+              </span>
+            </h2>
+          </div>
 
           <div className="verified-top-data">
             {""}
@@ -142,7 +169,11 @@ const customPage = ({ params, res }) => {
             <ImageLinks verified_url={urlResponse} />
           </div>
 
-          <h1>MORE INFORMATION</h1>
+          <h1 className="more-information">MORE INFORMATION</h1>
+          <div className="bill-info-ver-header">
+            <h2>Bill Information</h2>
+            <h2 className="more-bill-info-header">Verification Data</h2>
+          </div>
           <div className="more-information-tables">
             <BodyDataTable data={bill} />
             <VerificationTable hash={txHash} vurl={urlResponse} />

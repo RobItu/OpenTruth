@@ -32,7 +32,7 @@ const ImageLinks = ({ verified_url }) => {
         </Link>
       </div>
       <div className="spacer">
-        <Link href={verified_url} target="_blank" className="image-card">
+        <Link href={"/service"} target="_blank" className="image-card">
           <div>
             <Image
               src={"/tablet (1).jpg"}
@@ -41,7 +41,7 @@ const ImageLinks = ({ verified_url }) => {
               height={500}
             />
           </div>
-          <p>More Bill Information</p>
+          <p>See More Bills</p>
         </Link>
       </div>
     </div>
