@@ -22,7 +22,8 @@ const Bills = ({ data: bills }) => {
                 <p>Latest Action: {bill.latestAction.text}</p>
                 <p>Origin: {bill.originChamber}</p>
                 <p className="align-date">{bill.latestAction.actionDate}</p>
-                <div className="bill-title">
+
+                <div className="bill-arrow-icon">
                   <Image
                     src={"/arrow.png"}
                     alt={`card-header.PNG`}

@@ -679,12 +679,13 @@ main {
 /*===Lower Body===*/
 
 .lower-body {
-  padding: 0px 10px;
   margin: 0px 64px;
   background-color: rgb(255, 255, 255, 0.5);
   display: flex;
   gap: 200px;
   height: 75vh;
+  border-top: 2px solid #696868; /* Adjust the color and thickness as needed */
+  padding-top: 100px;
 }
 
 .lower-body h1 {
@@ -703,6 +704,18 @@ main {
   text-align: justify;
 }
 
+.lower-body .left-container h3 {
+  font-weight: bold;
+  font-size: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.blueTruth {
+  color: #375bd2;
+}
+
 .truth_blue {
   color: #375bd2;
 }
@@ -713,7 +726,6 @@ main {
 }
 
 /*==============Bills==============*/
-
 .servicePage {
   padding: 0px 10px;
   margin: 0px 64px;
@@ -739,6 +751,7 @@ main {
   font-weight: bolder;
   font-size: 3em;
   text-decoration: underline;
+  text-align: center;
 }
 
 .service-title-header {
@@ -748,7 +761,7 @@ main {
   padding-bottom: 20px;
   border-radius: 6px;
 }
-
+/**/
 .service-title-header p {
   display: flex;
   justify-content: center;
@@ -773,16 +786,17 @@ main {
   border-radius: 12px;
   padding: 10px;
 }
-
+/***/
 .card-image {
   padding-bottom: 5px;
 }
 
-.bill-title {
+.bill-arrow-icon {
   display: flex;
-  justify-content: end;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-
+/**/
 .bill-list {
   list-style-type: none;
   padding: 0;
@@ -802,7 +816,7 @@ main {
   padding: 20px;
   transition: transform 0.2s ease-in-out;
 }
-
+/***/
 .bill-list li:hover {
   transform: scale(1.05);
 }
@@ -822,7 +836,6 @@ main {
 .align-date {
   text-decoration: underline;
 }
-
 /*==================== SELECTED BILL =====================*/
 
 .bill-data-container {
@@ -1035,6 +1048,58 @@ main {
   border: 1px solid black;
   z-index: 10;
   /* additional styling as needed */
+}
+
+/*==============================CAROUSEL================================*/
+
+/* ImageCarousel.module.css */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 40px;
+}
+
+.imageContainer {
+  max-width: 650px;
+  border: 2px solid #333; /* Example border */
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  border: 2px solid #333; /* Border around the image */
+}
+
+.imageSource {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+}
+
+.sourceLink {
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgb(64, 64, 243);
+  border-radius: 8px;
+}
+
+.button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  color: #333;
 }
 
 /*=================== ========= ======================*/

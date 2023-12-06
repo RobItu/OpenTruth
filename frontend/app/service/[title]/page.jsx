@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useEffect, useState } from "react";
-import ShortenedTxHash from "@/components/ShortenedTxHash";
 import HeaderDataTable from "@/components/HeaderDataTable";
 import Prompt from "@/components/Prompt";
 import ImageLinks from "@/components/ImageLinks";
@@ -127,7 +126,7 @@ const customPage = ({ params, res }) => {
         <div>
           <h1 className="bill-title-header">Bill: {bill.title}</h1>
           <h2 className="bill-title-subtitle">
-            Data obtained has been cryptographically verified by
+            Data obtained has been cryptographically verified by{" "}
             <span>
               <Link
                 href={"https://functions.chain.link/mumbai/878"}

@@ -23,7 +23,7 @@ const ImageLinks = ({ verified_url }) => {
         <AiOptions />
       </div>
       <div className="spacer">
-        <Link href={"/service"} target="_blank" className="image-card">
+        <Link href={"/service"} className="image-card">
           <div>
             <Image
               src={"/tablet (1).jpg"}

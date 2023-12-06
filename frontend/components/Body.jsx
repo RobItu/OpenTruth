@@ -7,7 +7,9 @@ const Body = () => {
   return (
     <div className="upper-body">
       <div className="left-container">
-        <h1>Welcome to OpenTruth</h1>
+        <h1>
+          Welcome to Open<span className="blueTruth">Truth</span>
+        </h1>
         <p>The platform that uses AI and Web3 to empower the generations</p>
         <div className="btn-container">
           <Button text="Learn More" />
