@@ -118,7 +118,7 @@ main {
   margin: 0px 64px;
   background-color: rgb(255, 255, 255, 0.5);
   display: flex;
-  gap: 200px;
+  gap: 50px;
   border-top: 2px solid #696868; /* Adjust the color and thickness as needed */
   padding-top: 70px;
   height: 100vh;
@@ -371,6 +371,12 @@ main {
   background-color: white;
 }
 
+.description-cell-link {
+  text-decoration: underline;
+  color: blue;
+  background-color: white;
+}
+
 .body-table {
   border: 1px solid #f7f4f4; /* Adds border to table cells */
 }
@@ -600,4 +606,57 @@ main {
 .tech-card-image-0 {
   background-color: white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: for card shadow */
+}
+
+/*================VISION PAGE=================*/
+.vision-page {
+  display: flex;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: justify; /* Center text within the container */
+  padding-top: 10px;
+  background: linear-gradient(to bottom, #f0f0f0, rgb(179, 179, 226));
+  gap: 50px;
+  height: 100vh;
+}
+
+.vision-page-container {
+  background-color: rgb(255, 249, 249, 0.5);
+  padding: 20px;
+  margin-left: 40px;
+}
+
+.vision-page-container h1 {
+  text-align: center;
+}
+
+.vision-page img {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+  border: 2px solid #ccc; /* Customize border color and thickness */
+}
+
+.vision-page p {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.vision-page h1 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.vision-page-bio-container {
+  background-color: rgb(255, 249, 249, 0.5);
+  padding: 2px 20px;
+  margin-right: 40px;
+  margin-top: 0px;
+}
+
+.vision-page-bio-container h1 {
+  text-align: center;
+}
+.bio-image {
+  display: flex;
+  justify-content: center;
 }

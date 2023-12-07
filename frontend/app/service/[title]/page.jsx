@@ -7,12 +7,14 @@ import ImageLinks from "@/components/ImageLinks";
 import BodyDataTable from "@/components/BodyDataTable";
 import VerificationTable from "@/components/VerificationTable";
 import Link from "next/link";
+import SponsorData from "@/components/SponsorData";
 
 const customPage = ({ params, res }) => {
   const [bill, setBill] = useState({ latestAction: {} });
   const [runFunctions, setRunFunctions] = useState(false);
   const [txHash, setTxHash] = useState("");
   const [urlResponse, setUrlResponse] = useState("");
+  const [shouldRenderSponsorData, setShouldRenderSponsorData] = useState(false);
 
   //FETCH SELECTED BILL
   useEffect(() => {
@@ -41,6 +43,7 @@ const customPage = ({ params, res }) => {
             console.log(selectedBill.title);
             const lastUpdateDate = data[selectedBill.title]?.[0] ?? "";
             console.log("json lastUpdate date: ", lastUpdateDate);
+            setShouldRenderSponsorData(true);
 
             if (lastUpdateDate !== selectedBill.updateDate) {
               verifyWithFunctions(selectedBill);
@@ -85,7 +88,6 @@ const customPage = ({ params, res }) => {
           console.log("CALLING CONTRACT DATA...");
           const response = await fetch(`/api/fetchContractData`);
           const encodedURL = await response.text(); //  s_lastResponse from functions consumer contract
-          console.log("SHE BACK");
           const removeQuotes = encodedURL.replace(/(^"|^0x|"$)/g, "");
           console.log(`removeQuotes: `, removeQuotes);
           const remove0x = removeQuotes.substring(2);
@@ -171,7 +173,14 @@ const customPage = ({ params, res }) => {
           <h1 className="more-information">MORE INFORMATION</h1>
           <div className="more-information-tables">
             <BodyDataTable data={bill} />
-            <VerificationTable hash={txHash} vurl={urlResponse} />
+            <div className="sponsor-table-container">
+              <VerificationTable hash={txHash} vurl={urlResponse} />
+              {shouldRenderSponsorData ? (
+                <SponsorData data={bill.url.toString()} />
+              ) : (
+                <div>Loading sponsor data...</div>
+              )}
+            </div>
           </div>
         </div>
       </div>
