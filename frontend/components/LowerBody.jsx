@@ -27,16 +27,18 @@ const LowerBody = () => {
           </h3>
           <p>
             OpenTruth addresses a critical need for transparency and
-            accessibility in legal documentation. Never have we been more
-            divided in what is real and what isn't.{" "}
-            <span className="underline">Truth over Trust</span> is now paramount
-            and we OpenTruth we no longer have to rely on what others tell us is
-            the truth, we can now <span className="underline">verify.</span>
+            accessibility in legal documentation. In this day and age of
+            skepticism <span className="underline">Truth over Trust</span> is
+            paramount. OpenTruth offers a simple way to get your{" "}
+            <span className="underline">verified</span> sources and break them
+            down with AI.
           </p>
           <p>
-            Need more convincing? Scroll through the images on the right.
-            Sometimes the officials themselves cannot read through the multiple
-            lengthy and complex documents that can affect everyone in the world.
+            Need examples of why You need OpenTruth? Scrolls through the images
+            on the right. It is more crucial than ever for all of us to possess
+            the capacity to fully comprehend our legal documents, agreements,
+            contracts and terms that can have an impact not only on you, but the
+            rest of the world 🌎
           </p>
         </div>
         <div className="right-container">

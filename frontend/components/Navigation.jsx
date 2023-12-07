@@ -12,7 +12,7 @@ const Navigation = () => {
       </div>
       <div className="nav-links">
         <a href="/vision">Vision</a>
-        <a href="/team">Team</a>
+        <a href="/technology">Technology</a>
         <a href="/service">Service</a>
       </div>
     </nav>
