@@ -1,5 +1,6 @@
 "use client";
 import Bills from "@/components/Bills";
+import Footer from "@/components/Footer";
 import React, { useEffect, useState } from "react";
 
 const servicePage = () => {
@@ -31,6 +32,7 @@ const servicePage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 };

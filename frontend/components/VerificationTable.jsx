@@ -9,7 +9,7 @@ const VerificationTable = ({ hash, vurl }) => {
         <tbody>
           <tr>
             <td className="title-cell">TxHash</td>
-            <td>
+            <td className="description-cell">
               <Link
                 href={`https://mumbai.polygonscan.com/tx/${hash}`}
                 target="_blank"
@@ -21,7 +21,7 @@ const VerificationTable = ({ hash, vurl }) => {
           </tr>
           <tr>
             <td className="title-cell">Verified URL</td>
-            <td>
+            <td className="description-cell">
               {
                 <Link href={vurl} className="data-table-link" target="_blank">
                   {vurl}
@@ -31,7 +31,7 @@ const VerificationTable = ({ hash, vurl }) => {
           </tr>
           <tr>
             <td className="title-cell">Consumer Contract</td>
-            <td>
+            <td className="description-cell">
               <Link
                 href={
                   "https://mumbai.polygonscan.com/address/0xde5c73ab2bd1379c92d3e80666f859e7fdc8e404"
@@ -45,7 +45,7 @@ const VerificationTable = ({ hash, vurl }) => {
           </tr>
           <tr>
             <td className="title-cell">API Endpoint</td>
-            <td>
+            <td className="description-cell">
               <Link
                 href={"https://api.congress.gov/"}
                 target="_blank"

@@ -568,7 +568,7 @@ video {
 }
 
 main {
-  background: white;
+  background: linear-gradient(to bottom, #f0f0f0, rgb(179, 179, 226));
   height: 100%;
 }
 
@@ -578,15 +578,16 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #f0f0f0;
   color: white;
   border-bottom: 2px solid #b4b3b3;
-  margin: 0px 64px;
+  width: 100%;
 }
 .logo {
   font-size: 24px;
   font-weight: bold;
   padding-bottom: 10px;
+  padding-left: 64px;
 }
 .nav-links {
   display: flex;
@@ -683,9 +684,9 @@ main {
   background-color: rgb(255, 255, 255, 0.5);
   display: flex;
   gap: 200px;
-  height: 75vh;
   border-top: 2px solid #696868; /* Adjust the color and thickness as needed */
-  padding-top: 100px;
+  padding-top: 70px;
+  height: 100vh;
 }
 
 .lower-body h1 {
@@ -931,6 +932,10 @@ main {
   background-color: #f2f2f2;
 }
 
+.description-cell {
+  background-color: white;
+}
+
 .body-table {
   border: 1px solid #f7f4f4; /* Adds border to table cells */
 }
@@ -1058,8 +1063,9 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 40px;
+  padding-right: 20px;
 }
 
 .imageContainer {
@@ -1103,21 +1109,26 @@ main {
 }
 
 /*=================== ========= ======================*/
+/* ===================  FOOTER ==================== */
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #f0f0f0;
+  color: #333;
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid #b4b3b3;
+}
 
-@media (max-width: 600px) {
-  /* Adjust the 600px breakpoint as needed */
-  .navbar {
-    flex-direction: column;
-  }
+.contact-images {
+  display: flex;
+  justify-content: center;
+  gap: 250px;
+  padding-right: 150px;
+}
 
-  .nav-links {
-    margin-top: 20px; /* Adds space between logo and links */
-    text-align: center; /* Centers the links */
-  }
-
-  .nav-links a {
-    display: block; /* Stack the links */
-    margin: 10px 0; /* Adjust spacing around links */
-  }
+.icons {
+  display: flex;
+  gap: 10px;
 }
 
