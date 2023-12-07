@@ -1226,3 +1226,18 @@ main {
   justify-content: center;
 }
 
+.sponsor-container {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.sponsor-description-text {
+}
+
+.sponsor-image {
+  display: inline-block;
+  padding-right: 0.4px;
+  border: 2px solid black;
+}
+

@@ -8,6 +8,7 @@ import BodyDataTable from "@/components/BodyDataTable";
 import VerificationTable from "@/components/VerificationTable";
 import Link from "next/link";
 import SponsorData from "@/components/SponsorData";
+import Footer from "@/components/Footer";
 
 const customPage = ({ params, res }) => {
   const [bill, setBill] = useState({ latestAction: {} });
@@ -124,66 +125,69 @@ const customPage = ({ params, res }) => {
 
   return (
     <main>
-      <div className="servicePage">
-        <div>
-          <h1 className="bill-title-header">Bill: {bill.title}</h1>
-          <h2 className="bill-title-subtitle">
-            Data obtained has been cryptographically verified by{" "}
-            <span>
-              <Link
-                href={"https://functions.chain.link/mumbai/878"}
-                className="chainlink-functions-link"
-                target="_blank"
-              >
-                Chainlink Functions.
-              </Link>{" "}
-            </span>
-          </h2>
-          <div className="bill-title-subtitle">
-            <h2>
-              Data sourced from the official United States Congress{" "}
+      <div>
+        <div className="servicePage">
+          <div>
+            <h1 className="bill-title-header">Bill: {bill.title}</h1>
+            <h2 className="bill-title-subtitle">
+              Data obtained has been cryptographically verified by{" "}
               <span>
                 <Link
-                  href={"https://chain.link/functions"}
+                  href={"https://functions.chain.link/mumbai/878"}
                   className="chainlink-functions-link"
                   target="_blank"
                 >
-                  API End-point.
+                  Chainlink Functions.
                 </Link>{" "}
               </span>
             </h2>
-          </div>
+            <div className="bill-title-subtitle">
+              <h2>
+                Data sourced from the official United States Congress{" "}
+                <span>
+                  <Link
+                    href={"https://chain.link/functions"}
+                    className="chainlink-functions-link"
+                    target="_blank"
+                  >
+                    API End-point.
+                  </Link>{" "}
+                </span>
+              </h2>
+            </div>
 
-          <div className="verified-top-data">
-            {""}
+            <div className="verified-top-data">
+              {""}
 
-            <HeaderDataTable
-              hash={txHash}
-              date={bill.updateDate}
-              vurl={urlResponse}
-            />
-          </div>
-          <div className="prompt">
-            <Prompt verified_url={urlResponse} />
-          </div>
-          <div className="link-container">
-            <ImageLinks verified_url={urlResponse} />
-          </div>
+              <HeaderDataTable
+                hash={txHash}
+                date={bill.updateDate}
+                vurl={urlResponse}
+              />
+            </div>
+            <div className="prompt">
+              <Prompt verified_url={urlResponse} />
+            </div>
+            <div className="link-container">
+              <ImageLinks verified_url={urlResponse} />
+            </div>
 
-          <h1 className="more-information">MORE INFORMATION</h1>
-          <div className="more-information-tables">
-            <BodyDataTable data={bill} />
-            <div className="sponsor-table-container">
-              <VerificationTable hash={txHash} vurl={urlResponse} />
-              {shouldRenderSponsorData ? (
-                <SponsorData data={bill.url.toString()} />
-              ) : (
-                <div>Loading sponsor data...</div>
-              )}
+            <h1 className="more-information">MORE INFORMATION</h1>
+            <div className="more-information-tables">
+              <BodyDataTable data={bill} />
+              <div className="sponsor-table-container">
+                <VerificationTable hash={txHash} vurl={urlResponse} />
+                {shouldRenderSponsorData ? (
+                  <SponsorData data={bill.url.toString()} />
+                ) : (
+                  <div>Loading sponsor data...</div>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 };
