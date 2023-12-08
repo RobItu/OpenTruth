@@ -15,7 +15,7 @@ const SponsorData = ({ data }) => {
     const moreBillDetails = async () => {
       const decodedUrl = decodeURIComponent(data);
 
-      const response = await fetch(`/api/moreBillDetails?foo=${decodedUrl}`);
+      const response = await fetch(`/api/moreBillDetails?weburl=${decodedUrl}`);
       const json = await response.json();
       console.log("JSON: ", json);
       const sponsors = json.bill.sponsors[0];
@@ -28,7 +28,7 @@ const SponsorData = ({ data }) => {
     };
 
     const sponsor_website = async (bioguideId) => {
-      const response = await fetch(`/api/sponsor?foo=${bioguideId}`);
+      const response = await fetch(`/api/sponsor?bioguideid=${bioguideId}`);
       const json = await response.json();
       const website = json.member.officialWebsiteUrl;
       console.log(json);

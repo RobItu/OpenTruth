@@ -3,6 +3,10 @@ const { wallet, signer } = require("../connection.js");
 const { networks } = require("../networks.js");
 const { ContractFactory, utils } = require("ethers");
 
+/**
+ * Script to deploy Chainlink Functions consumer contract on Polygon Mumbai network
+ */
+
 const NETWORK = "polygonMumbai";
 
 const routerAddress = networks[NETWORK].functionsRouter;

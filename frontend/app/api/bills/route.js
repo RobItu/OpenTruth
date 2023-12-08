@@ -1,8 +1,16 @@
 import { NextResponse } from "next/server";
 
+/**
+ * API Call to api.congress.gov
+ *
+ * Change "limit" value to the amount of bills you desire
+ * @query "&_=${Date.now()}" sends current time to prevent cached responses
+ * @returns Returns a list of bills sorted by date of latest action.
+ */
+
 async function fetchBills() {
   const response = await fetch(
-    `https://api.congress.gov/v3/bill?limit=10&api_key=${
+    `https://api.congress.gov/v3/bill?limit=100&api_key=${
       process.env.GOV_API_KEY
     }&_=${Date.now()}`,
     {

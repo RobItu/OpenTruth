@@ -6,6 +6,10 @@ const {
 
 require("@chainlink/env-enc").config("../.env.enc");
 
+/**
+ * Script that will listen to Functions Consumner Contract events
+ */
+
 const { networks } = require("./networks.js");
 const { provider } = require("./connection.js");
 

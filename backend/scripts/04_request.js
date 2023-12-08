@@ -5,6 +5,13 @@ const { Location } = require("@chainlink/functions-toolkit");
 require("@chainlink/env-enc").config();
 // require('dotenv').config()
 
+/**
+ * Script to send a request to ChatGPT.
+ * ChatGPT is currently not being used.
+ */
+
+
+
 const { signer } = require("../connection.js");
 const { abi } = require("../contracts/abi/FunctionsConsumer.json");
 

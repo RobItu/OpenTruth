@@ -8,14 +8,22 @@ require("@chainlink/env-enc").config();
 const { signer } = require("../connection.js");
 const { abi } = require("../contracts/abi/FunctionsConsumer.json");
 
+/**
+ * Script to rewrite source.js file & send dynamic Functions request to Chainlink DON
+ * This script is called by the express API-endpoint and passes dynamic arguements
+ *
+ * @query congressNum, billT, billNum: dynamic arguements passed by express api
+ */
+
 const consumerAddress = "0xDe5C73ab2bD1379c92D3e80666f859e7Fdc8e404";
 const subscriptionId = "878";
-const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a6571665f";
+const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a6572a431";
 
 const sendRequest = async () => {
   if (!consumerAddress || !encryptedSecretsRef || !subscriptionId) {
     throw Error("Missing required environment variables.");
   }
+
   const functionsConsumer = new Contract(consumerAddress, abi, signer);
 
   // Function to replace placeholders with actual arguments
@@ -23,7 +31,7 @@ const sendRequest = async () => {
     return template.replace(/{{(\w+)}}/g, (_, key) => args[key] || "");
   }
 
-  const [, , congressNum, billT, billNum] = process.argv;
+  const [, , congressNum, billT, billNum] = process.argv; //Dynamic arguements from express api endpoint
 
   const arguments = {
     congressNumber: congressNum,

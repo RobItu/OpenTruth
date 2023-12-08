@@ -10,19 +10,29 @@ import Link from "next/link";
 import SponsorData from "@/components/SponsorData";
 import Footer from "@/components/Footer";
 
-const customPage = ({ params, res }) => {
+const customPage = ({ params }) => {
   const [bill, setBill] = useState({ latestAction: {} });
-  const [runFunctions, setRunFunctions] = useState(false);
   const [txHash, setTxHash] = useState("");
   const [urlResponse, setUrlResponse] = useState("");
   const [shouldRenderSponsorData, setShouldRenderSponsorData] = useState(false);
 
-  //FETCH SELECTED BILL
+  /**
+   * This dynamic page does multiple things
+   * 1. Fetches and filters bills, selecting the one the user click on /service page
+   * 2. Calls and reads verifiedBills.js in /public
+   * 3. If bill is verified, load data from json, else call express API endpoint to initiate functions request
+   * 4. fetch consumer contract s_lastResponse
+   *
+   */
+
   useEffect(() => {
     let isMounted = true;
 
     if (typeof window !== "undefined") {
       if (isMounted) {
+        /**
+         * Fetches and filters to selected bill
+         */
         const getBills = async () => {
           const response = await fetch("/api/bills");
           const data = await response.json();
@@ -36,6 +46,12 @@ const customPage = ({ params, res }) => {
           checkLastUpdate(selectedBill[0]);
         };
 
+        /**
+         * Checks if bill needs to be re-verified
+         * If it doesn't it populates the page with json data
+         * If it does it calls verifyWithFunctions
+         * @param {json} selectedBill
+         */
         const checkLastUpdate = async (selectedBill) => {
           try {
             const jsonResponse = await fetch("/verifiedBills.json");
@@ -48,9 +64,9 @@ const customPage = ({ params, res }) => {
 
             if (lastUpdateDate !== selectedBill.updateDate) {
               verifyWithFunctions(selectedBill);
-              console.log("OK");
+              console.log("Initiate verifyWithFunctions...");
             } else {
-              console.log("matched");
+              console.log("Bill already verified.");
               setTxHash(data[selectedBill.title][1]);
               setUrlResponse(data[selectedBill.title][2]);
             }
@@ -58,6 +74,15 @@ const customPage = ({ params, res }) => {
             console.error("Error reading JSON file: ", error);
           }
         };
+
+        /**
+         * This function creates and sends the dynamic arguement from the bill with a call to express api endpoint
+         * With the congress number, billtype and bill number, you can access any bill
+         * Response is RequestId & TxHash, TxHash is filtered and cleaned up
+         * Calls getContractData to retrieve s_lastResponse
+         *
+         * @param {json} selectedBill
+         */
 
         const verifyWithFunctions = async (selectedBill) => {
           const queryParams = new URLSearchParams({
@@ -67,6 +92,7 @@ const customPage = ({ params, res }) => {
           }).toString();
 
           console.log("CALLING.....");
+          console.log("QUERY PARAM", queryParams);
           const response = await fetch(
             `${process.env.NEXT_PUBLIC_FUNCTIONS_API_URL}/?${queryParams}`
           );
@@ -82,8 +108,14 @@ const customPage = ({ params, res }) => {
           } else {
             console.log("Error, no TxHash present.");
           }
-          setRunFunctions(false);
         };
+
+        /**
+         * This function fetches Functions Consumer Contract s_lastResponse and writes it, along with other data, to verifiedBills.json
+         *
+         * @param {json} selectedBill Needed to populate verifiedBills.json with title and last update date
+         * @param {string} _txHash Needed to populate verifiedBills.json with txHash
+         */
 
         const getContractData = async (selectedBill, _txHash) => {
           console.log("CALLING CONTRACT DATA...");

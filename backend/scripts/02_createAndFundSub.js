@@ -1,8 +1,12 @@
 const { SubscriptionManager } = require("@chainlink/functions-toolkit");
 const { utils } = require("ethers");
-
 const { signer } = require("../connection");
 const { networks } = require("../networks");
+
+/**
+ * Script to create and fund a Functions subscription
+ * Subscription ID can be found in scripts/07_congress_request.js
+ */
 
 const NETWORK = "polygonMumbai";
 

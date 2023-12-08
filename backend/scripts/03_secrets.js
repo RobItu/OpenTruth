@@ -1,12 +1,15 @@
 const { SecretsManager } = require("@chainlink/functions-toolkit");
 const fs = require("fs");
 const path = require("path");
-
 const { signer } = require("../connection.js");
 const { networks } = require("../networks.js");
-
 require("@chainlink/env-enc").config();
 // require('dotenv').config()
+
+/**
+ * Script to create DON secrets for ChatGPT
+ * Currently ChatGPT is not being used
+ */
 
 const NETWORK = "polygonMumbai";
 

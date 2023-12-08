@@ -5,6 +5,10 @@ require("@chainlink/env-enc").config();
 
 const { providers, Wallet } = require("ethers");
 
+/**
+ * Script that creates provider, wallet and signer with polygonMumbai RPC
+ */
+
 const RPC_URL = process.env.RPC_URL;
 
 if (!RPC_URL) {

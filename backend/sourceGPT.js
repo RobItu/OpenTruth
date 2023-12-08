@@ -1,3 +1,8 @@
+/**
+ * Functions source code for ChatGPT responses
+ * ChatGPT is currenty not being used.
+ */
+
 const gptPrompt = args[0];
 
 const postData = {
@@ -16,11 +21,11 @@ const openAIResponse = await Functions.makeHttpRequest({
   data: postData,
 });
 
-if (openAIResponse.error) {
-  throw new Error(JSON.stringify(openAIResponse));
+if (congressApiResponse.error) {
+  throw new Error(JSON.stringify(congressApiResponse));
 }
 
-const result = openAIResponse.data.choices[0].message.content;
+const result = congressApiResponse.data.choices[0].message.content;
 
 console.log(result);
 return Functions.encodeString(result);

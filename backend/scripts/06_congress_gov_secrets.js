@@ -8,6 +8,12 @@ const { networks } = require("../networks.js");
 require("@chainlink/env-enc").config();
 // require('dotenv').config()
 
+/**
+ * Script to create DON secrets for api.congress.gov functions
+ * Make sure to update encryptedSecretsRef in scripts/07_congress_request.js
+ * or Error: DON encrypted secrets not found will happen. 
+ */
+
 const NETWORK = "polygonMumbai";
 
 const functionsRouterAddress = networks[NETWORK].functionsRouter;

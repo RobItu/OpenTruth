@@ -4,7 +4,12 @@ const cors = require("cors");
 const fs = require("fs");
 
 const api = express();
+
 api.use(cors());
+
+/**
+ * Removing cache option to guarantee new API responses
+ */
 
 api.use((req, res, next) => {
   res.set("Cache-Control", "no-store");
@@ -14,14 +19,19 @@ api.use((req, res, next) => {
 const HOST = "localhost";
 const PORT = 8888;
 
-api.get("/", (req, res) => {
-  res.send("Welcome to this  API!");
-});
+/**
+ * API endpoint to update data from verifiedBills.json
+ *
+ * verifiedBills.json is a json file that holds information of bills that have been verified by Functions
+ * this prevents from verifying the same bill multiple times and wasting blockchain space
+ *
+ * @notice Please change filePath with your own; the target is verifiedBills.json
+ */
 
 api.get("/update-data", (req, res) => {
   const { billTitle, updateDate, txHash, verifiedURL } = req.query;
   const filePath =
-    "/home/robitu/hackathon/hackathon-fall-2023/opentruth2/frontend/public/verifiedBills.json";
+    "/home/robitu/hackathon/hackathon-fall-2023/opentruth2/frontend/public/verifiedBills.json"; //UPDATE THIS WITH YOUR OWN PATH
 
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
@@ -34,11 +44,7 @@ api.get("/update-data", (req, res) => {
       const jsonData = JSON.parse(data);
 
       // Add a new key-value pair to the object
-      jsonData[billTitle] = [
-        updateDate,
-        txHash,
-        verifiedURL,
-      ];
+      jsonData[billTitle] = [updateDate, txHash, verifiedURL];
 
       const updatedData = JSON.stringify(jsonData, null, 2);
 
@@ -58,10 +64,20 @@ api.get("/update-data", (req, res) => {
   res.send("JSON updated with latest data");
 });
 
+/**
+ * API endpoint to run the Chainlink Functions script
+ *
+ * Endpoint executes the functions request script with dynamic parameters
+ * This endpoint is called by verifyWithFunctions() in frontend/app/service/[title]/page.jsx
+ * returns requestID and TxHash
+ */
+
 api.get("/run-chainlink-functions-script", (req, res) => {
   console.log("CALLING CHAINLINK FUNCTIONS...");
   const { congressNumber, billType, billNumber } = req.query;
-  console.log(`NUMBER: ${congressNumber} TYPE: ${billType} BNUMBER: ${billNumber}`)
+  console.log(
+    `NUMBER: ${congressNumber} TYPE: ${billType} BNUMBER: ${billNumber}`
+  );
   exec(
     `node /home/robitu/hackathon/hackathon-fall-2023/opentruth2/backend/scripts/07_congress_request.js ${congressNumber} ${billType} ${billNumber}`,
     (error, stdout, stderr) => {
@@ -69,8 +85,7 @@ api.get("/run-chainlink-functions-script", (req, res) => {
         console.error(`exec error: ${error}`);
         return res.status(500).send("Failed to run test script");
       }
-      console.log(`stdout: ${stdout}`);
-      console.error(`stderr: ${stderr}`);
+      console.log(stdout);
       console.log("~~~ CHAINLINK FUNCTIONS REQUEST SENT ~~~");
       res.send(stdout); // Send stdout as a plain text response
     }
