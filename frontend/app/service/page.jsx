@@ -1,19 +1,28 @@
 "use client";
 import Bills from "@/components/Bills";
 import Footer from "@/components/Footer";
+import Searchbar from "@/components/SearchBar";
 import React, { useEffect, useState } from "react";
 
 const servicePage = () => {
   const [bills, setBill] = useState([]);
+  const [query, setQuery] = useState("");
+
   useEffect(() => {
     const getBills = async () => {
       const response = await fetch(`/api/bills`);
       const bills = await response.json();
-      console.log(bills);
-      setBill(bills.bills);
+      if (query != "") {
+        const filteredData = bills.bills.filter((bill) =>
+          bill.title.toLowerCase().includes(query.toLocaleLowerCase())
+        );
+        setBill(filteredData);
+      } else {
+        setBill(bills.bills);
+      }
     };
     getBills();
-  }, []);
+  }, [query]);
 
   return (
     <main>
@@ -28,6 +37,11 @@ const servicePage = () => {
             <p> Bills listed are sorted by date of latest action.</p>
           </div>
           <div className="bill-cards-container">
+            <Searchbar
+              getSearchResults={(searchResponse) => {
+                setQuery(searchResponse);
+              }}
+            />
             <Bills data={bills} />
           </div>
         </div>

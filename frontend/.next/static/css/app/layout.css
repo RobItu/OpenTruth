@@ -1241,3 +1241,24 @@ main {
   border: 2px solid black;
 }
 
+.search-form {
+  padding: 10px; /* Add some padding for spacing */
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+}
+.search-input {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 70%; /* Set the input field width to 80% of the form's width */
+  padding: 10px; /* Add padding to the input field for spacing */
+  border: 1px solid #ccc; /* Add a border for a visual boundary */
+}
+
+.search-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0070f3;
+  color: white;
+  padding: 1em;
+}
+
