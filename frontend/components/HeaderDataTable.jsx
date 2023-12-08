@@ -2,6 +2,12 @@ import React from "react";
 import ShortenedTxHash from "./ShortenedTxHash";
 import Link from "next/link";
 
+/**
+ * 
+ * @param {string} params used to populate header table 
+ *  * @returns 
+ */
+
 const HeaderDataTable = ({ hash, date, vurl }) => {
   return (
     <div className="data-table-container">

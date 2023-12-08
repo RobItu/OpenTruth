@@ -3,6 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
+/**
+ * This component makes two api calls to populate the sponsors information table
+ * @param {json} data json object of selected bill
+ * @returns sponsor information table
+ */
+
 const SponsorData = ({ data }) => {
   const [govWebsite, setGovWebsite] = useState("");
   const [sponsor, setSponsor] = useState({ bioguideId: {} });
@@ -12,28 +18,32 @@ const SponsorData = ({ data }) => {
   const [officeNumber, setOfficeNumber] = useState("");
 
   useEffect(() => {
+    /**
+     * The selected bill has a nested URL that contains more information about it
+     * moreBillDetails calls this URL and retrieves further information about the bill sponsor
+     * calls sponsor_website with bioguide (member ID) to find out more information
+     */
     const moreBillDetails = async () => {
       const decodedUrl = decodeURIComponent(data);
 
       const response = await fetch(`/api/moreBillDetails?weburl=${decodedUrl}`);
       const json = await response.json();
-      console.log("JSON: ", json);
       const sponsors = json.bill.sponsors[0];
-      console.log(`SPONSORS: `, sponsors);
       setSponsor(sponsors);
       setShouldRenderSponsorData(true);
       const bioguideId = sponsors.bioguideId;
-      console.log(bioguideId);
       sponsor_website(bioguideId);
     };
+
+    /**
+     * sponsor_website calls api to retrieve bill sponsor's website
+     * @param {string} bioguideId member ID used to find member's website
+     */
 
     const sponsor_website = async (bioguideId) => {
       const response = await fetch(`/api/sponsor?bioguideid=${bioguideId}`);
       const json = await response.json();
       const website = json.member.officialWebsiteUrl;
-      console.log(json);
-      console.log("CALLED SPONSOR");
-      console.log(website);
       setGovWebsite(website);
       setImageURL(json.member.depiction.imageUrl);
       setOfficeNumber(json.member.addressInformation.phoneNumber);

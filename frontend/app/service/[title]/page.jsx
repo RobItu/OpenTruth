@@ -57,9 +57,7 @@ const customPage = ({ params }) => {
             const jsonResponse = await fetch("/verifiedBills.json");
             const data = await jsonResponse.json();
 
-            console.log(selectedBill.title);
             const lastUpdateDate = data[selectedBill.title]?.[0] ?? "";
-            console.log("json lastUpdate date: ", lastUpdateDate);
             setShouldRenderSponsorData(true);
 
             if (lastUpdateDate !== selectedBill.updateDate) {
@@ -91,8 +89,7 @@ const customPage = ({ params }) => {
             billNumber: selectedBill.number,
           }).toString();
 
-          console.log("CALLING.....");
-          console.log("QUERY PARAM", queryParams);
+          console.log("CALLING EXPRESS FUNCTIONS API");
           const response = await fetch(
             `${process.env.NEXT_PUBLIC_FUNCTIONS_API_URL}/?${queryParams}`
           );
@@ -122,13 +119,11 @@ const customPage = ({ params }) => {
           const response = await fetch(`/api/fetchContractData`);
           const encodedURL = await response.text(); //  s_lastResponse from functions consumer contract
           const removeQuotes = encodedURL.replace(/(^"|^0x|"$)/g, "");
-          console.log(`removeQuotes: `, removeQuotes);
           const remove0x = removeQuotes.substring(2);
 
           const buffer = Buffer.from(remove0x, "hex");
 
           const _verifiedURL = buffer.toString("utf8");
-          console.log(`VERIFIEDURL: `, _verifiedURL);
 
           console.log("CONTRACT DATA: ", _verifiedURL);
 
@@ -178,7 +173,7 @@ const customPage = ({ params }) => {
                 Data sourced from the official United States Congress{" "}
                 <span>
                   <Link
-                    href={"https://chain.link/functions"}
+                    href={"https://api.congress.gov/"}
                     className="chainlink-functions-link"
                     target="_blank"
                   >

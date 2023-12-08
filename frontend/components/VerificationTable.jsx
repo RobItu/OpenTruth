@@ -1,6 +1,13 @@
 import Link from "next/link";
 import React from "react";
 
+/**
+ * This component is the verification table that allows users to dig into the works of chainlink Functions
+ * And verify their source is authentic
+ * @param {string} hash & vurl used for linking to polygonscan block explorer
+ * @returns
+ */
+
 const VerificationTable = ({ hash, vurl }) => {
   return (
     <div>

@@ -17,7 +17,7 @@ const { abi } = require("../contracts/abi/FunctionsConsumer.json");
 
 const consumerAddress = "0xDe5C73ab2bD1379c92D3e80666f859e7Fdc8e404";
 const subscriptionId = "878";
-const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a6572a431";
+const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a6572b836";
 
 const sendRequest = async () => {
   if (!consumerAddress || !encryptedSecretsRef || !subscriptionId) {

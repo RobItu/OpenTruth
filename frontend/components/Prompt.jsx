@@ -1,6 +1,12 @@
 "use client";
 import React, { useState, useRef } from "react";
 
+/**
+ * Prompt that users can copy and paste in AI website
+ * @param {string} verified_url URL verified by chainlink functions
+ * @returns
+ */
+
 const Prompt = ({ verified_url }) => {
   const [isCopied, setIsCopied] = useState(false);
   const textToCopy = useRef();

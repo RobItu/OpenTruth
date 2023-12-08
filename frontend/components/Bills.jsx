@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+/**
+ * Component that lists every bill for /service/page.jsx
+ * @param {json} data array of bill objects
+ * @returns 
+ */
+
 const Bills = ({ data: bills }) => {
   return (
     <div className="bills-container">

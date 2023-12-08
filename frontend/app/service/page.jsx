@@ -4,6 +4,12 @@ import Footer from "@/components/Footer";
 import Searchbar from "@/components/SearchBar";
 import React, { useEffect, useState } from "react";
 
+/**
+ * This page calls bills/route.js api route to retrieve bills
+ *
+ * @returns List of bills ordered by latest action date
+ */
+
 const servicePage = () => {
   const [bills, setBill] = useState([]);
   const [query, setQuery] = useState("");

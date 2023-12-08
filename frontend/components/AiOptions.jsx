@@ -2,6 +2,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
 
+/**
+ * Component for service/[title] that links users to AI
+ */
+
 const AiOptions = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });

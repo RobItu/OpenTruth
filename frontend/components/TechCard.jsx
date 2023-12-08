@@ -2,6 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 const TechCard = ({ imageSrc, text, id }) => {
+  /**
+   * Cards for technology page
+   */
   return (
     <div className="tech-card">
       <div className={`tech-card-image-${id}`}>

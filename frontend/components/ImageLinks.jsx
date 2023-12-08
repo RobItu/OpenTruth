@@ -3,6 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import AiOptions from "./AiOptions";
 
+/**
+ * Image-Links for service/[title] page to go to source document, AI or back to services
+ * @param {string} verified_url 
+ * @returns 
+ */
+
 const ImageLinks = ({ verified_url }) => {
   return (
     <div className="image-links-container">

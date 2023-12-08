@@ -3,6 +3,11 @@ import Image from "next/image";
 import Carousel from "./Carousel";
 import Footer from "./Footer";
 
+/**
+ * 
+ * @returns Lower Body for homepage
+ */
+
 const LowerBody = () => {
   const images = [
     "/homeImages/cnn.PNG",
@@ -34,7 +39,7 @@ const LowerBody = () => {
             down with AI.
           </p>
           <p>
-            Need examples of why You need OpenTruth? Scrolls through the images
+            Need examples of why you need OpenTruth? Scroll through the images
             on the right. It is more crucial than ever for all of us to possess
             the capacity to fully comprehend our legal documents, agreements,
             contracts and terms that can have an impact not only on you, but the

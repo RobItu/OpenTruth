@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * Component that creates a table listing selected bill informatoin
+ * @param {json} data Selected bill json object
+ * @returns 
+ */
+
 const BodyDataTable = ({ data }) => {
   return (
     <div>

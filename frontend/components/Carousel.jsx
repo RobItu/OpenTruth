@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * Homepage images set in a carousel
+ */
+
 const images = [
   {
     src: "/homeImages/cnn.PNG",
