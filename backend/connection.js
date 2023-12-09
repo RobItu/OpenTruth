@@ -9,7 +9,7 @@ const { providers, Wallet } = require("ethers");
  * Script that creates provider, wallet and signer with polygonMumbai RPC
  */
 
-const RPC_URL = process.env.RPC_URL;
+const RPC_URL = process.env.MUMBAI_RPC_URL;
 
 if (!RPC_URL) {
   throw new Error("Please set the RPC_URL environment variable");

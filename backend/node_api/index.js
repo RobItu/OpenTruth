@@ -30,8 +30,10 @@ const PORT = 8888;
 
 api.get("/update-data", (req, res) => {
   const { billTitle, updateDate, txHash, verifiedURL } = req.query;
+
+  //UPDATE THIS WITH YOUR OWN PATH TO verifiedBills.json
   const filePath =
-    "/home/robitu/hackathon/hackathon-fall-2023/opentruth2/frontend/public/verifiedBills.json"; //UPDATE THIS WITH YOUR OWN PATH
+    "/home/robitu/hackathon/hackathon-fall-2023/opentruth2/frontend/public/verifiedBills.json";
 
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
@@ -78,6 +80,8 @@ api.get("/run-chainlink-functions-script", (req, res) => {
   console.log(
     `NUMBER: ${congressNumber} TYPE: ${billType} BNUMBER: ${billNumber}`
   );
+
+  //update JUST your 07_congress_request.js FILE PATH here
   exec(
     `node /home/robitu/hackathon/hackathon-fall-2023/opentruth2/backend/scripts/07_congress_request.js ${congressNumber} ${billType} ${billNumber}`,
     (error, stdout, stderr) => {
