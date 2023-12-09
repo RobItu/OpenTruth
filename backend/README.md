@@ -6,9 +6,10 @@ The express server can be found at`/node_api/index.js`
 
 - [Getting Started](#getting-started)
   - [Install dependencies](#install-dependencies)
+  - [Environment Variables](#environment-variables)
 - [Usage](#usage)
-  - [Express](#express)
-  - [Listener](#listener)
+  - [Express API Server](#express-api-server)
+  - [Listener (Optional)](#listener-optional)
 - [More Information](#more-information)
   - [Express API endpoint](#express-api-endpoint)
   - [Scripts](#scripts)
@@ -22,15 +23,35 @@ The express server can be found at`/node_api/index.js`
 npm install
 ```
 
-- #### Make sure to have set up chainlink env-enc environment variables at the [root](https://github.com/RobItu/OpenTruth/tree/main#environment-variables) of this project.
+### Environment Variables
+
+Set up the env variables with chainlink env-enc
+
+```
+//set password
+npx env-enc set-pw
+
+//set key and values
+npx env-enc set
+
+//see values
+npx env-enc view
+```
+
+You want to make sure to have these variables set:
+
+- `MUMBAI_RPC_URL`
+- `PRIVATE_KEY`
+- [GOV_API_KEY](https://api.congress.gov/sign-up/)
+
 - #### Make sure to have configured [the execution path](https://github.com/RobItu/OpenTruth/tree/main#path-changes) for the express api endpoint
 - #### Make sure to have a fresh [encrypted secret](https://github.com/RobItu/OpenTruth/tree/main#encrypted-secrets) to avoid Functions errors
 
 ## Usage
 
-### Express
+### Express API Server
 
-If you want to see the the express server execute the functions request script with dynamic arguements live:
+This server **MUST** be running to allow the express server to execute the functions request script with dynamic arguements live:
 
 ```
 npm start
@@ -42,7 +63,7 @@ node node_api/index.js
 
 Functions will trigger when you select a bill that has not been verified.
 
-### Listener
+### Listener (Optional)
 
 If you want to see the live-response from Chainlink Functions:
 

@@ -20,8 +20,9 @@ Thanks for checking my project out!
 - [Path Changes](#path-changes)
 - [Encrypted Secrets](#encrypted-secrets)
 - [Usage](#usage)
-  - [Express API](#express-server--listener)
-  - [Listener](#listener)
+  - [Start NextJS Server](#start-nextjs-server)
+  - [Start Express Server](#start-express-server)
+  - [Listener (Optional)](#listener-optional)
 - [More Information](#more-information)
   - [Issues/Bugs](#issuesbugs)
 - [Contact](#contact)
@@ -54,10 +55,9 @@ npm install
 
 ## Environment Variables
 
-NextJS cannot read environment variables set by chainlink env-enc so they need to be set up twice. Once in `/OpenTruth` with chainlink env-enc and the other inside `/OpenTruth/frontend` with a `.env.local` file for NextJS
+NextJS cannot read environment variables set by chainlink env-enc so they need to be set up twice. Once in `/OpenTruth/backend` with chainlink env-enc and the other in `/OpenTruth/frontend` with a `.env.local` file for NextJS
 
-1. **chainlink env-enc** _(C:/Users/Your/Path/OpenTruth
-   )_
+1. **chainlink env-enc** _( /OpenTruth/backend )_
 
 ```
 //set password
@@ -76,7 +76,7 @@ You want to make sure to have these variables set:
 - `PRIVATE_KEY`
 - [GOV_API_KEY](https://api.congress.gov/sign-up/)
 
-2. Navigate to frontend folder and create a **env.local** file _(C:/Users/Your/Path/OpenTruth/frontend)_
+2. Create **env.local** file _( /OpenTruth/frontend )_
 
 ```
 GOV_API_KEY="" // Same value from chainlink env-enc
@@ -113,7 +113,9 @@ node scripts/06_congress_gov_secrets.js
 
 # Usage
 
-Start NextJS server:
+### **IMPORTANT: You MUST run Express API server on a seperate terminal at the same time NextJS is running. It will NOT work otherwise.**
+
+### Start NextJS server:
 
 1. cd into `/OpenTruth/frontend`
 
@@ -123,15 +125,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Express server & Listener
+### Start Express Server
 
-### Express
-
-If you want to see the the express server execute the functions request script with dynamic arguements live:
-
-1. Open a new terminal and `npx env-enc set-pw` to mount environment variables
-2. `cd /OpenTruth/backend`
-3.
+1. Open a new terminal and cd into `/OpenTruth/backend`
+2. `npx env-enc set-pw` to mount environment variables
 
 ```
 npm start
@@ -143,7 +140,7 @@ node node_api/index.js
 
 Functions will trigger when you select a bill that has not been verified.
 
-### Listener
+## Listener (Optional)
 
 If you want to see the live-response from Chainlink Functions:
 
