@@ -4,6 +4,16 @@ This is the backend for OpenTruth, powered by NodeJS and ExpressJS.
 
 The express server can be found at`/node_api/index.js`
 
+- [Getting Started](#getting-started)
+  - [Install dependencies](#install-dependencies)
+- [Usage](#usage)
+  - [Express](#express)
+  - [Listener](#listener)
+- [More Information](#more-information)
+  - [Express API endpoint](#express-api-endpoint)
+  - [Scripts](#scripts)
+- [Source Files (Functions)](#source-files-functions)
+
 ## Getting Started
 
 ### Install dependencies

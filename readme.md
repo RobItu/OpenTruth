@@ -1,4 +1,9 @@
-![OpenTruth Logo](/logo2.png "OpenTruth Logo")
+<br/>
+<p align="center">
+<img src="./logo2.png" width="500" alt="OpenTruth logo">
+</a>
+</p>
+<br/>
 
 # OpenTruth
 
@@ -8,7 +13,19 @@ OpenTruth is a platform that offers source authentication and AI breakdown for l
 
 Thanks for checking my project out!
 
-{image}
+- [Getting Started](#getting-started)
+  - [Requirements](#requirements)
+- [Quickstart](#quickstart)
+- [Environment Variables](#environment-variables)
+- [Path Changes](#path-changes)
+- [Encrypted Secrets](#encrypted-secrets)
+- [Usage](#usage)
+  - [Express API](#express-server--listener)
+  - [Listener](#listener)
+- [More Information](#more-information)
+  - [Issues/Bugs](#issuesbugs)
+- [Contact](#contact)
+- [Thank You](#thank-you)
 
 # Getting Started
 
@@ -79,15 +96,19 @@ The Express API endpoints are configured to execute scripts located in specific 
 | /OpenTruth/backend/node_api/index.js | filePath      | 36          |
 | /OpenTruth/backend/node_api/index.js | --            | 86          |
 
-Make sure to replacement path is the absolute (from the root) and **NOT** relative path.
+Make sure the replacement path is the absolute path and **NOT** the relative path.
 
 ## Encrypted Secrets
+
 Most likely the encrypted secrets needed to execute the functions request is expired and you must generate a new one. To generate a new one:
+
 1. cd `/OpenTruth/backend`
-2. 
+2.
+
 ```
 node scripts/06_congress_gov_secrets.js
- ```
+```
+
 3. Copy the new encrypted secret hash (0x...) and paste it inside `07_congress_request.js` in the `encryptedSecretsRef`(ln:20) variable
 
 # Usage

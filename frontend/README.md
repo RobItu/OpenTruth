@@ -2,6 +2,11 @@
 
 This is the front end that's powered by [Next.js](https://nextjs.org/).
 
+- [Getting Started](#getting-started)
+  - [Install dependencies](#install-dependencies)
+  - [Environment Variables](#environment-variables)
+- [Usage](#usage)
+
 ## Getting Started
 
 ### Install dependencies
@@ -33,4 +38,4 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-When navigating throught the website, `/services` will fetch congress API and return a list of bills. When you select the bill it will navigate you to `/service/[bill-title]` and initiate functions request if [verifiedBills.json] does not have the bill or the bill needs to be updated.
+When navigating throught the website, `/services` will fetch congress API and return a list of bills. When you select a bill it will navigate you to `/service/[bill-title]` and initiate functions request if [verifiedBills.json] does not have the bill or the bill needs to be updated.
