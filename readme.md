@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-<img src="./logo2.png" width="500" alt="OpenTruth logo">
+<img src="frontend/public/logo2.png" width="500" alt="OpenTruth logo">
 </a>
 </p>
 <br/>
