@@ -1,7 +1,9 @@
 {
   "/service/page": "app/service/page.js",
-  "/service/[title]/page": "app/service/[title]/page.js",
-  "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/api/bills/route": "app/api/bills/route.js"
+  "/api/bills/route": "app/api/bills/route.js",
+  "/service/[title]/page": "app/service/[title]/page.js",
+  "/api/moreBillDetails/route": "app/api/moreBillDetails/route.js",
+  "/api/sponsor/route": "app/api/sponsor/route.js",
+  "/api/fetchContractData/route": "app/api/fetchContractData/route.js"
 }

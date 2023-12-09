@@ -1,10 +1,14 @@
 {
-  "name": "OpenTruth Functions",
+  "name": "OpenTruth Backend",
   "author": {
     "name": "Roberto Iturralde"
   },
+  "main": "node_api/index.js",
+  "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
-    "listen": "nodemon scripts/06_listen.ts"
+    "listen": "nodemon scripts/06_listen.ts",
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "@chainlink/contracts": "^0.8.0",
@@ -13,12 +17,15 @@
     "@types/node": "^20.6.2",
     "dotenv": "^16.3.1",
     "nodemon": "^3.0.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-verify": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^3.1.7",
     "hardhat": "^2.19.0",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "nodemon": "^2.0.6"
   }
 }

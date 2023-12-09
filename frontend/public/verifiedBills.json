@@ -39,11 +39,6 @@
     "0xd580df8833cc9df0cffa7c02dca5b88b0281c3999e9591c087965e3210a7dc77",
     "https://www.congress.gov/118/bills/s3250/BILLS-118s3250es.htm"
   ],
-  "A bill to promote fairness in the sale of event tickets.": [
-    "2023-12-08",
-    "0x68d483f48df8e7a4eb20fbe2f97fee48cff59cf87cab9a4966cf3aa6645ac7a7",
-    ""
-  ],
   "A resolution honoring the life of the First Lady Rosalynn Carter.": [
     "2023-12-08",
     "0xc467ecdd040391c9a84c59da46fb7eb4ec0297eb266fb440273338cae61e6816",
@@ -60,8 +55,18 @@
     ""
   ],
   "Alaska’s Right to Produce Act of 2023": [
-    "2023-12-07",
-    "0xfcafc09ae8523d944e657dc9c5540dbbd0650cf27f19773c98ba02f5f1a415aa",
-    "https://www.congress.gov/118/bills/hr6285/BILLS-118hr6285ih.htm"
+    "2023-12-08",
+    "0x80550c2ce6835f1e84a6de9b18b971214bb08064dfa87d931609e29d10fff4dc",
+    ""
+  ],
+  "To direct the Secretary of Education to forgive the Federal student loans of borrowers who are enrolled for benefits under part A of title XVIII of the Social Security Act, and for other purposes.": [
+    "2023-12-08",
+    "0xb71dd0a52073bca377700e5fed71395cf1b1047378f5b5372a3bb582abfe22b9",
+    ""
+  ],
+  "A bill to promote fairness in the sale of event tickets.": [
+    "2023-12-08",
+    "0x65d4361527c093342da9ca297e7785993c0d8cedfc9abd606077ae8edffc2b24",
+    ""
   ]
 }
