@@ -24,6 +24,7 @@ Thanks for checking my project out!
   - [Start Express Server](#start-express-server)
   - [Listener (Optional)](#listener-optional)
 - [More Information](#more-information)
+  - [Functions Information](#functions-information) 
   - [Issues/Bugs](#issuesbugs)
   - [Troubleshooting](#troubleshooting)
 - [Going Forward](#going-forward)
