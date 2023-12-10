@@ -173,8 +173,8 @@ Generally, every problem is reported by a console.log. Be vigilant of your termi
 
 - ### If the Verified URL never filled it could due to:
   - DON hosted secrets expired and must be replaced (most common)
-    - Check [Express server](#) console logs for "_failed to fetch DONHosted secrets: not found_" error
-    - Solution: [EncryptedKey](#)
+    - Check [Express Server](#start-express-server) console logs for "_failed to fetch DONHosted secrets: not found_" error
+    - Solution: [Encrypted Secrets](#encrypted-secrets)
   - `api.congress.gov` json response does not have the specific URL "key" that Functions is looking for some reason.
     - Check `listen.js` console log or [consumer contract](https://mumbai.polygonscan.com/address/0xde5c73ab2bd1379c92d3e80666f859e7fdc8e404#readContract) for error message "TypeError: _data.textVersions[0].formats format is undefined"_.
     - Solution: Patience. As per the official website:
