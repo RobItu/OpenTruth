@@ -156,6 +156,10 @@ node listen.js
 
 # More information
 
+## Functions Information
+- Consumer Contract Address: [0xde5c73ab2bd1379c92d3e80666f859e7fdc8e404](https://mumbai.polygonscan.com/address/0xde5c73ab2bd1379c92d3e80666f859e7fdc8e404#readContract)
+- Subscription ID: [878](https://functions.chain.link/mumbai/878)
+
 ## Issues/Bugs
 
 Issues that are known and are currently being worked on.
