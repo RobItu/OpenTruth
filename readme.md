@@ -9,7 +9,7 @@
 
 _This is a project for Chainlink's Constellation Hackathon 2023._
 
-OpenTruth is a platform that offers source authentication and AI breakdown for legal documents. To see a more in depth explanation of how it works check out the devpost {here}
+OpenTruth is a platform that offers source authentication and AI breakdown for legal documents. To see a more in depth explanation of how it works check out the devpost [here](https://devpost.com/software/opentruth)
 
 Thanks for checking my project out!
 
