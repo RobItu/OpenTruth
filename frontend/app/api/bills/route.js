@@ -10,7 +10,7 @@ import { NextResponse } from "next/server";
 
 async function fetchBills() {
   const response = await fetch(
-    `https://api.congress.gov/v3/bill?limit=100&api_key=${
+    `https://api.congress.gov/v3/bill?limit=18&api_key=${
       process.env.GOV_API_KEY
     }&_=${Date.now()}`,
     {

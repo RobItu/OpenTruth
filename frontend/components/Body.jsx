@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "./Button";
 
 /**
- * 
+ *
  * @returns Upper body for homepage
  */
 
@@ -15,7 +15,10 @@ const Body = () => {
         <h1>
           Welcome to Open<span className="blueTruth">Truth</span>
         </h1>
-        <p>The platform that uses AI and Web3 to empower the generations</p>
+        <p>
+          A platform that uses AI and Web3 to provide you with authentic
+          sources.{" "}
+        </p>
         <div className="btn-container">
           <Link href="/vision" className="btn">
             Learn More

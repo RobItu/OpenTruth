@@ -1,14 +1,19 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import ShortenedTxHash from "./ShortenedTxHash";
 import Link from "next/link";
 
 /**
- * 
- * @param {string} params used to populate header table 
- *  * @returns 
+ *
+ * @param {string} params used to populate header table
+ *  * @returns
  */
 
 const HeaderDataTable = ({ hash, date, vurl }) => {
+  const [loadData, setLoadData] = useState(false);
+  useEffect(() => {
+    setLoadData(true);
+  }, [vurl]);
   return (
     <div className="data-table-container">
       <table className="data-table">
@@ -25,14 +30,23 @@ const HeaderDataTable = ({ hash, date, vurl }) => {
             <td>✅</td>
             <td>
               <Link
-                href={`https://mumbai.polygonscan.com/tx/${hash}`}
-                className="data-table-link" target="_blank"
+                href={`https://www.oklink.com/amoy/tx/${hash}`}
+                className="data-table-link"
+                target="_blank"
               >
                 <ShortenedTxHash hash={hash} />
               </Link>
             </td>
             <td>{date}</td>
-            <td>{<Link href={vurl} className="data-table-link" target="_blank">{vurl}</Link>}</td>
+            <td>
+              {loadData ? (
+                <Link href={vurl} className="data-table-link" target="_blank">
+                  {vurl}
+                </Link>
+              ) : (
+                <div>Waiting on functions...</div>
+              )}
+            </td>
           </tr>
         </tbody>
       </table>

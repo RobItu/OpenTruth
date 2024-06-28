@@ -9,30 +9,15 @@
     "0xaa4a6d4e5a54112d8a899231562baeaf9ef11b0d43b2631bf32e9476b064fb65",
     "https://www.congress.gov/118/bills/hr839/BILLS-118hr839rh.htm"
   ],
-  "RELIEVE Act": [
-    "2023-12-05",
-    "0x7900b0b814a725d285f4f7004577a58607b4ef8fc5b1da71dfb6e5484d8bdc01",
-    "https://www.congress.gov/118/bills/hr839/BILLS-118hr839rh.htm"
-  ],
   "Providing for consideration of the bill (H.R. 4468) to prohibit the Administrator of the Environmental Protection Agency from finalizing, implementing, or enforcing a proposed rule with respect to emissions from vehicles, and for other purposes; providing for consideration of the bill (H.R. 5933) to amend the Higher Education Act of 1965 to require additional information in disclosures of foreign gifts and contracts from foreign sources, restrict contracts with certain foreign entities and foreign countries of concern, require certain staff and faculty to report foreign gifts and contracts, and require disclosure of certain foreign investments within endowments; and providing for consideration of the joint resolution (H. J. Res. 88) providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Improving Income Driven Repayment for the William D. Ford Federal Direct Loan Program and the Federal Family Education Loan (FFEL) Program\".": [
     "2023-12-05",
     "0xcd9a5ef94a49f75f51223dd0492209484f7498c5deda75330d0c96fd22d4739a",
     "https://www.congress.gov/118/bills/hr815/BILLS-118hr815pcs.htm"
   ],
-  "Reuse Excess Property Act": [
-    "2023-12-06",
-    "0xd9a9c196c4475ac4ec865e9207a859bd30df976ae6da47d28117d2e050055b14",
-    ""
-  ],
   "A bill to end the use of solitary confinement and other forms of restrictive housing in all Federal agencies and entities with which Federal agencies contract.": [
     "2023-12-06",
     "0x3ffd4e95c72c102f1bc8df570758b13cef97970fdf79f85ff700a1367fe70e1c",
     "https://www.congress.gov/118/bills/s2685/BILLS-118s2685is.htm"
-  ],
-  "A resolution designating December 16, 2023, as \"National Wreaths Across America Day\".": [
-    "2023-12-07",
-    "0x886196b21bac7adb7c40a90953fde72bc2ac2b02dbef20f1f783f9dd2fbccfc7",
-    ""
   ],
   "A bill to provide remote access to court proceedings for victims of the 1988 Bombing of Pan Am Flight 103 over Lockerbie, Scotland.": [
     "2023-12-08",
@@ -42,17 +27,17 @@
   "A resolution honoring the life of the First Lady Rosalynn Carter.": [
     "2023-12-08",
     "0xc467ecdd040391c9a84c59da46fb7eb4ec0297eb266fb440273338cae61e6816",
-    ""
+    "https://www.congress.gov/118/bills/hr815/BILLS-118hr815pcs.htm"
   ],
   "A bill to provide a retroactive effective date for the promotions of senior officers of the Armed Forces whose military promotions were delayed as a result of the suspension of Senate confirmation of such promotions.": [
     "2023-12-08",
     "0xf678493ef71f66e09560dc22aac56b49c5975d6c4d19f3d31ca5a105e3a908e4",
-    ""
+    "https://www.congress.gov/118/bills/hr839/BILLS-118hr839rh.htm"
   ],
   "A bill to redesignate the Richard H. Poff Federal Building located at 210 Franklin Road Southwest in Roanoke, Virginia, as the \"Reuben E. Lawson Federal Building\", and for other purposes.": [
     "2023-12-07",
     "0xe8b2243c85728491ff774138bb077a479f5f1ede64cdcd2d26f0f681fbfb2601",
-    ""
+    "https://www.congress.gov/118/bills/hr815/BILLS-118hr815pcs.htm"
   ],
   "Alaska’s Right to Produce Act of 2023": [
     "2023-12-08",
@@ -62,11 +47,26 @@
   "To direct the Secretary of Education to forgive the Federal student loans of borrowers who are enrolled for benefits under part A of title XVIII of the Social Security Act, and for other purposes.": [
     "2023-12-08",
     "0xb71dd0a52073bca377700e5fed71395cf1b1047378f5b5372a3bb582abfe22b9",
-    ""
+    "https://www.congress.gov/118/bills/hr815/BILLS-118hr815pcs.htm"
   ],
   "A bill to promote fairness in the sale of event tickets.": [
     "2023-12-08",
     "0x8531d7fb543ec107d3ca8b55943c054ecd8e7830a47a4a65f970c06c7fb8f7e0",
-    ""
+    "https://www.congress.gov/118/bills/hr839/BILLS-118hr839rh.htm"
+  ],
+  "FISA Reform and Reauthorization Act of 2023": [
+    "2023-12-09",
+    "0xb1a985f69d4e80eb93d08b6f2910889a3641d082966facd521796025854963cc",
+    "https://www.congress.gov/118/bills/hr6611/BILLS-118hr6611ih.htm"
+  ],
+  "Modernizing and Ensuring PBM Accountability Act": [
+    "2023-12-09",
+    "0x2f44dc9408b107e4c7827cf03a815b7f0ea21bba65220f5b7430979c38251289",
+    "https://www.congress.gov/118/bills/s2973/BILLS-118s2973rs.htm"
+  ],
+  "Long Island Sound Restoration and Stewardship Reauthorization Act of 2023": [
+    "2024-06-28",
+    "0x96da1332972e6e7434cfa6e7c0dd06d65258a34a38a9be51fc049cd2387c3e9b",
+    "https://www.congress.gov/118/bills/hr5441/BILLS-118hr5441ih.htm"
   ]
 }

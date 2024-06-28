@@ -23,7 +23,7 @@ If you haven't done so, create a **env.local** file
 GOV_API_KEY=""
 NEXT_PUBLIC_FUNCTIONS_API_URL=http://localhost:8888/run-chainlink-functions-script
 NEXT_PUBLIC_UPDATE_DATA_URL=http://localhost:8888/update-data
-MUMBAI_RPC_URL=""
+POLYGON_AMOY_RPC_URL=""
 ```
 
 `NEXT_PUBLIC_FUNCTIONS_API_URL` and `NEXT_PUBLIC_FUNCTIONS_API_URL` values have to be as shown.

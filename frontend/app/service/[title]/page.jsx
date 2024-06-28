@@ -160,7 +160,7 @@ const customPage = ({ params }) => {
               Data obtained has been cryptographically verified by{" "}
               <span>
                 <Link
-                  href={"https://functions.chain.link/mumbai/878"}
+                  href={"https://functions.chain.link/polygon-amoy/317"}
                   className="chainlink-functions-link"
                   target="_blank"
                 >

@@ -17,8 +17,8 @@ function delay(ms) {
 export async function GET(req, res) {
   try {
     await delay(20000);
-    const web3 = new Web3(process.env.MUMBAI_RPC_URL); // Use the RPC URL here
-    const contractAddress = "0xde5c73ab2bd1379c92d3e80666f859e7fdc8e404";
+    const web3 = new Web3(process.env.POLYGON_AMOY_RPC_URL); // Use the RPC URL here
+    const contractAddress = "0xa8Dacf576122c3bcFe1465d8a548754844c179CA";
     const contract = new web3.eth.Contract(contractABI.abi, contractAddress);
     const response = await contract.methods.s_lastResponse().call();
     return NextResponse.json(response);

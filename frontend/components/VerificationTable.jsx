@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 /**
  * This component is the verification table that allows users to dig into the works of chainlink Functions
@@ -9,6 +10,10 @@ import React from "react";
  */
 
 const VerificationTable = ({ hash, vurl }) => {
+  const [loadData, setLoadData] = useState(false);
+  useEffect(() => {
+    setLoadData(true);
+  }, [vurl]);
   return (
     <div>
       <h2 className="verification-information">Verification Information</h2>
@@ -18,7 +23,7 @@ const VerificationTable = ({ hash, vurl }) => {
             <td className="title-cell">TxHash</td>
             <td className="description-cell">
               <Link
-                href={`https://mumbai.polygonscan.com/tx/${hash}`}
+                href={`https://www.oklink.com/amoy/tx/${hash}`}
                 target="_blank"
                 className="data-table-link"
               >
@@ -29,11 +34,13 @@ const VerificationTable = ({ hash, vurl }) => {
           <tr>
             <td className="title-cell">Verified URL</td>
             <td className="description-cell">
-              {
+              {loadData ? (
                 <Link href={vurl} className="data-table-link" target="_blank">
                   {vurl}
                 </Link>
-              }
+              ) : (
+                <div>Waiting on functions...</div>
+              )}
             </td>
           </tr>
           <tr>
@@ -41,7 +48,7 @@ const VerificationTable = ({ hash, vurl }) => {
             <td className="description-cell">
               <Link
                 href={
-                  "https://mumbai.polygonscan.com/address/0xde5c73ab2bd1379c92d3e80666f859e7fdc8e404"
+                  "https://mumbai.polygonscan.com/address/0xde5c73ab2bd1379c92d3e80666f859e7fdc8e404#readContract"
                 }
                 target="_blank"
                 className="data-table-link"
