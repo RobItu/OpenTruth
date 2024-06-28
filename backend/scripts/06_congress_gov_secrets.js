@@ -11,10 +11,10 @@ require("@chainlink/env-enc").config();
 /**
  * Script to create DON secrets for api.congress.gov functions
  * Make sure to update encryptedSecretsRef in scripts/07_congress_request.js
- * or Error: DON encrypted secrets not found will happen. 
+ * or Error: DON encrypted secrets not found will happen.
  */
 
-const NETWORK = "polygonMumbai";
+const NETWORK = "polygonAmoy";
 
 const functionsRouterAddress = networks[NETWORK].functionsRouter;
 const donId = networks[NETWORK].donId;

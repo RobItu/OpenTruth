@@ -40,7 +40,7 @@ npx env-enc view
 
 You want to make sure to have these variables set:
 
-- `MUMBAI_RPC_URL`
+- `POLYGON_AMOY_RPC_URL`
 - `PRIVATE_KEY`
 - [GOV_API_KEY](https://api.congress.gov/sign-up/)
 

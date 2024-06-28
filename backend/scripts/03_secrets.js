@@ -11,7 +11,7 @@ require("@chainlink/env-enc").config();
  * Currently ChatGPT is not being used
  */
 
-const NETWORK = "polygonMumbai";
+const NETWORK = "polygonAmoy";
 
 const functionsRouterAddress = networks[NETWORK].functionsRouter;
 const donId = networks[NETWORK].donId;

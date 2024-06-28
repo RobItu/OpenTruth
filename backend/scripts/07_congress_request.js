@@ -15,9 +15,9 @@ const { abi } = require("../contracts/abi/FunctionsConsumer.json");
  * @query congressNum, billT, billNum: dynamic arguements passed by express api
  */
 
-const consumerAddress = "0xDe5C73ab2bD1379c92D3e80666f859e7Fdc8e404";
-const subscriptionId = "878";
-const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a6573bf80";
+const consumerAddress = "0xa8Dacf576122c3bcFe1465d8a548754844c179CA";
+const subscriptionId = "317";
+const encryptedSecretsRef = "0xa266736c6f744964006776657273696f6e1a667f1372";
 
 const sendRequest = async () => {
   if (!consumerAddress || !encryptedSecretsRef || !subscriptionId) {

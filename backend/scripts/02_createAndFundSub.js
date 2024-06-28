@@ -8,12 +8,12 @@ const { networks } = require("../networks");
  * Subscription ID can be found in scripts/07_congress_request.js
  */
 
-const NETWORK = "polygonMumbai";
+const NETWORK = "polygonAmoy";
 
 const functionsRouterAddress = networks[NETWORK].functionsRouter;
 const linkTokenAddress = networks[NETWORK].linkToken;
 const consumerAddress = "0xDe5C73ab2bD1379c92D3e80666f859e7Fdc8e404";
-const LINK_AMOUNT = "3.3"
+const LINK_AMOUNT = "3.3";
 
 const createAndFundSub = async () => {
   const subscriptionManager = new SubscriptionManager({
@@ -38,16 +38,18 @@ const createAndFundSub = async () => {
     `\n Subscription ${subscriptionId} now has ${consumerAddress} as a consumer.)`
   );
 
-    // Fund Subscription
-    const juelsAmount = utils.parseUnits(LINK_AMOUNT, 18).toString()
-    subscriptionManager.fundSubscription({
-        subscriptionId,
-        juelsAmount
-    })
+  // Fund Subscription
+  const juelsAmount = utils.parseUnits(LINK_AMOUNT, 18).toString();
+  subscriptionManager.fundSubscription({
+    subscriptionId,
+    juelsAmount,
+  });
 
-    console.log(`\n Subscription ${subscriptionId} funded with ${LINK_AMOUNT} LINK.`)
+  console.log(
+    `\n Subscription ${subscriptionId} funded with ${LINK_AMOUNT} LINK.`
+  );
 };
 
-createAndFundSub().catch(err => {
+createAndFundSub().catch((err) => {
   console.log("Error creating/funding Subscription ", err);
 });

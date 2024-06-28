@@ -13,8 +13,8 @@ require("@chainlink/env-enc").config("../.env.enc");
 const { networks } = require("./networks.js");
 const { provider } = require("./connection.js");
 
-const NETWORK = "polygonMumbai";
-const subscriptionId = "878";
+const NETWORK = "polygonAmoy";
+const subscriptionId = "317";
 let readOutResponse = "";
 
 const responseListener = new ResponseListener({

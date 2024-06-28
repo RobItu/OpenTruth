@@ -6,16 +6,16 @@ require("@chainlink/env-enc").config();
 const { providers, Wallet } = require("ethers");
 
 /**
- * Script that creates provider, wallet and signer with polygonMumbai RPC
+ * Script that creates provider, wallet and signer with polygonAmoy RPC
  */
 
-const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL;
+const POLYGON_AMOY_RPC_URL = process.env.POLYGON_AMOY_RPC_URL;
 
-if (!MUMBAI_RPC_URL) {
-  throw new Error("Please set the MUMBAI_RPC_URL environment variable");
+if (!POLYGON_AMOY_RPC_URL) {
+  throw new Error("Please set the POLYGON_AMOY_RPC_URL environment variable");
 }
 
-const provider = new providers.JsonRpcProvider(MUMBAI_RPC_URL);
+const provider = new providers.JsonRpcProvider(POLYGON_AMOY_RPC_URL);
 const wallet = new Wallet(process.env.PRIVATE_KEY || "UNSET");
 const signer = wallet.connect(provider);
 
