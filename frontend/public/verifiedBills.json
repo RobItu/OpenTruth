@@ -64,9 +64,14 @@
     "0x2f44dc9408b107e4c7827cf03a815b7f0ea21bba65220f5b7430979c38251289",
     "https://www.congress.gov/118/bills/s2973/BILLS-118s2973rs.htm"
   ],
-  "Long Island Sound Restoration and Stewardship Reauthorization Act of 2023": [
-    "2024-06-28",
-    "0x96da1332972e6e7434cfa6e7c0dd06d65258a34a38a9be51fc049cd2387c3e9b",
-    "https://www.congress.gov/118/bills/hr5441/BILLS-118hr5441ih.htm"
+  "Foreign Grant Reporting Act": [
+    "2024-07-01",
+    "0x8c581ea98b32114c8fbba6732eba1d28b41e52b25322afd0d9a5077cf621a678",
+    ""
+  ],
+  "Taxpayer Data Protection Act": [
+    "2024-07-01",
+    "0xaabec7a238ad35aed97d5b037a4a68dc2e99bc9792ac881c6c0f750b9c826a67",
+    "https://www.congress.gov/118/bills/hr8292/BILLS-118hr8292rh.htm"
   ]
 }

@@ -30,7 +30,7 @@ const HeaderDataTable = ({ hash, date, vurl }) => {
             <td>✅</td>
             <td>
               <Link
-                href={`https://www.oklink.com/amoy/tx/${hash}`}
+                href={`https://amoy.polygonscan.com/tx/${hash}`}
                 className="data-table-link"
                 target="_blank"
               >

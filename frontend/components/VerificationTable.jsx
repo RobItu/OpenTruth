@@ -23,7 +23,7 @@ const VerificationTable = ({ hash, vurl }) => {
             <td className="title-cell">TxHash</td>
             <td className="description-cell">
               <Link
-                href={`https://www.oklink.com/amoy/tx/${hash}`}
+                href={`https://amoy.polygonscan.com/tx/${hash}`}
                 target="_blank"
                 className="data-table-link"
               >
@@ -48,7 +48,7 @@ const VerificationTable = ({ hash, vurl }) => {
             <td className="description-cell">
               <Link
                 href={
-                  "https://mumbai.polygonscan.com/address/0xde5c73ab2bd1379c92d3e80666f859e7fdc8e404#readContract"
+                  "https://amoy.polygonscan.com/address/0xcB310d201C1b73a7bfBbdBF648f3ac4441a133C2#readContract"
                 }
                 target="_blank"
                 className="data-table-link"
